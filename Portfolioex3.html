@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="Ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio-ex3</title>
+    <link rel="stylesheet" href="css/Portfolioex3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    </div>
+    <div class="mainbox">
+        <div class="menubox-left">
+            <div class="menubox">
+                <div class="iconbox">
+                    <h6><i class="fa-solid fa-house-chimney"></i></h6>
+                    <h6><i class="fa-solid fa-flag"></i></h6>
+                    <h6><i class="fa-solid fa-chart-pie"></i></h6>
+                    <h6><i class="fa-solid fa-signs-post"></i></h6>
+                </div>
+                <div class="txtbox">
+                    <p>Home</p>
+                    <p>LifePlan</p>
+                    <p>Stats</p>
+                    <p>Exp</p>
+                </div>
+            </div>
+        </div>
+        <div class="contentbox">
+            <div class="nav">
+                <form action="">
+                    <input type="text" placeholder="Search" >
+                    <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+                <div class="navend">
+                    <p><i class="fa-solid fa-bell"></i>
+                    <i class="fa-solid fa-envelope"></i>
+                    Ncodesin</p>
+                </div>
+            </div>
+            <h2 style="padding: 15px;">Dashboard</h2>
+            <div class="gridbox-1">
+                <div class="gbox1">
+                    <p>
+                        Earnings (Monthly)
+                    </p>
+                    <h2>$400,000</h2>
+                    <i class="fa-solid fa-calendar-days"></i>
+                </div>
+                <div class="gbox2">
+                    <p>Earnings (Annual)</p>
+                    <h2>$800,000</h2>
+                    <i class="fa-solid fa-dollar-sign"></i>
+                </div>
+                <div class="gbox3">
+                    <p>Tasks</p>
+                    <h2>13</h2>
+                    <i class="fa-solid fa-list-ul"></i>
+                </div>
+                <div class="gbox4">
+                    <p>Requests</p>
+                    <h2>26</h2>
+                    <i class="fa-solid fa-comments"></i>
+                </div>
+            </div>
+            <div class="gridbox-2">
+                <div class="chartbox">
+                    <p class="boxheader"><strong>Earnings Overview</strong></p>
+                    <div class="chartcolor">
+                        <canvas id="myChart" width="400px" height="200px"></canvas>
+                        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                        <script>
+                            const labels = [
+                              'January',
+                              'February',
+                              'March',
+                              'April',
+                              'May',
+                              'June',
+                            ];
+                        
+                            const data = {
+                              labels: labels,
+                              datasets: [{
+                                label: 'My First dataset',
+                                backgroundColor: 'lightblue',
+                                borderColor: 'rgb(255, 99, 132)',
+                                data: [0, 10, 5, 2, 20, 30, 45],
+                              }]
+                            };
+                        
+                            const config = {
+                              type: 'line',
+                              data: data,
+                              options: {}
+                            };
+                        </script>
+                        <script>
+                            const myChart = new Chart(
+                              document.getElementById('myChart'),
+                              config
+                            );
+                        </script>
+                    </div>
+                </div>
+                <div class="Tasksbox">
+                    <p class="boxheader"><strong>Tasks</strong></p>
+                    <div class="Tasksbox-footer">
+                        <div><p>Borrowed Items</p></div>
+                        <div><p>Trello requests</p></div>
+                        <div><p>Marked Comments</p></div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-4">
+                <div class="lasticon">
+                    <i class="fa-brands fa-facebook-square"></i>
+                </div>
+                <div class="lasticon">
+                    <i class="fa-brands fa-github-square"></i>
+                </div>
+                <div class="lasticon">
+                    <i class="fa-brands fa-twitter-square"></i>
+                </div>
+            </div>
+            <div class="final">
+                <p>@ncodesin</p>
+            </div>
+        </div>
+        <div class="end"></div>
+    </div>
+</body>
+</html>
