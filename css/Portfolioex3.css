@@ -1,0 +1,353 @@
+@charset "UTF-8";
+body {
+  margin: 0;
+}
+
+.mainbox {
+  width: 100%;
+  height: 1100px;
+  border: 1px solid black;
+  background: rgb(221, 220, 220);
+  position: relative;
+}
+
+.menubox-left {
+  width: 55px;
+  height: 2000px;
+  background: linear-gradient(45deg, darkgray, lightgray);
+  position: absolute;
+}
+
+.menubox {
+  width: 300px;
+  height: 550px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 250px;
+  background: linear-gradient(45deg, rgb(39, 91, 235), skyblue);
+  transform: translateX(-245px);
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1;
+}
+.menubox .iconbox {
+  position: absolute;
+  padding: 10px;
+  text-align: end;
+  right: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.menubox h6 {
+  font-size: 30px;
+  color: snow;
+}
+.menubox .txtbox {
+  text-align: center;
+  font-size: 25px;
+  color: snow;
+  position: absolute;
+  top: 60px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.menubox .txtbox p {
+  padding-bottom: 50px;
+  opacity: 0;
+}
+
+.contentbox {
+  padding-left: 60px;
+  position: absolute;
+  width: 100%;
+  height: 2000px;
+  box-sizing: border-box;
+}
+
+.nav {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  background: white;
+  box-sizing: border-box;
+  box-shadow: 1px 2px 4px 1px slategray;
+}
+.nav form {
+  width: 70%;
+}
+.nav input {
+  height: 35px;
+  margin: 4px;
+  border: 2px solid lightsalmon;
+  border-radius: 3px;
+  margin-left: 15px;
+  margin-right: 0px;
+  position: relative;
+  border-right: none;
+}
+.nav button {
+  height: 41px;
+  width: 40px;
+  border: 2px solid black;
+  font-size: 18px;
+  background: rgb(233, 172, 148);
+  color: black;
+  margin-left: 0px;
+  border-radius: 3px;
+  position: absolute;
+  margin-top: 3.5px;
+  transform: translateX(-10px);
+}
+.nav .navend {
+  text-align: end;
+  width: 30%;
+  padding-right: 30px;
+  color: slategray;
+}
+.nav .navend i {
+  padding-right: 30px;
+  font-size: 20px;
+}
+
+.gridbox-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 120px;
+  grid-gap: 10px;
+  padding: 10px;
+  margin: auto;
+}
+.gridbox-1 .gbox1 {
+  border-left: 4px solid skyblue;
+}
+.gridbox-1 .gbox2 {
+  border-left: 4px solid lightgreen;
+}
+.gridbox-1 .gbox3 {
+  border-left: 4px solid rgb(39, 91, 235);
+}
+.gridbox-1 .gbox4 {
+  border-left: 4px solid orange;
+}
+
+.gridbox-1 div {
+  border: 1px solid black;
+  box-shadow: 1px 1px 5px 2px slategray;
+  border-radius: 5px;
+  background-color: snow;
+  padding: 10px;
+}
+.gridbox-1 div i {
+  position: relative;
+  bottom: 70%;
+  left: 85%;
+  font-size: 25px;
+  color: slategray;
+}
+
+.gridbox-2 {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 65% 30%;
+  grid-template-rows: 250px 250px;
+  grid-template-areas: "차트 태스크" "차트 .";
+  grid-gap: 20px;
+}
+.gridbox-2 .Tasksbox, .gridbox-2 .chartbox {
+  box-shadow: 0px 1px 2px 2px slategray;
+  margin: 10px;
+}
+.gridbox-2 .chartbox {
+  grid-area: 차트;
+}
+.gridbox-2 .chartbox .chartcolor {
+  background: snow;
+  width: 100%;
+  height: 85%;
+}
+.gridbox-2 .boxheader {
+  padding: 10px;
+  margin: 0px;
+  border-bottom: 1px solid slategray;
+}
+.gridbox-2 .Tasksbox {
+  grid-area: 태스크;
+}
+.gridbox-2 .Tasksbox .Tasksbox-footer {
+  height: 190px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 33.33%;
+}
+.gridbox-2 .Tasksbox .Tasksbox-footer div {
+  border-bottom: 1px solid slategray;
+  background-color: snow;
+}
+.gridbox-2 .Tasksbox .Tasksbox-footer p {
+  padding: 5px;
+}
+
+@-webkit-keyframes 아이콘박스 {
+  0% {
+    transform: translate(0px);
+  }
+  100% {
+    transform: translateX(-100px);
+  }
+}
+
+@keyframes 아이콘박스 {
+  0% {
+    transform: translate(0px);
+  }
+  100% {
+    transform: translateX(-100px);
+  }
+}
+@-webkit-keyframes 아이콘박스이름 {
+  0% {
+    transform: translate(0px);
+  }
+  100% {
+    transform: translateX(88px);
+    opacity: 1;
+  }
+}
+@keyframes 아이콘박스이름 {
+  0% {
+    transform: translate(0px);
+  }
+  100% {
+    transform: translateX(88px);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes 메뉴박스 {
+  0% {
+    transform: translateX(-245px);
+  }
+  100% {
+    transform: translateX(-145px);
+  }
+}
+@keyframes 메뉴박스 {
+  0% {
+    transform: translateX(-245px);
+  }
+  100% {
+    transform: translateX(-145px);
+  }
+}
+@-webkit-keyframes 검색바 {
+  0% {
+    width: 175px;
+  }
+  100% {
+    width: 250px;
+  }
+}
+@keyframes 검색바 {
+  0% {
+    width: 175px;
+  }
+  100% {
+    width: 250px;
+  }
+}
+.nav input:focus {
+  -webkit-animation-name: 검색바;
+          animation-name: 검색바;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.menubox:hover {
+  -webkit-animation-name: 메뉴박스;
+          animation-name: 메뉴박스;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+.menubox:hover .iconbox {
+  -webkit-animation-name: 아이콘박스;
+          animation-name: 아이콘박스;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+.menubox:hover .txtbox p {
+  -webkit-animation-name: 아이콘박스이름;
+          animation-name: 아이콘박스이름;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.end {
+  clear: both;
+}
+
+.flex-4 {
+  display: flex;
+  width: 100%;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+
+.lasticon {
+  font-size: 40px;
+  margin: 15px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.final {
+  text-align: center;
+  background-color: rgba(255, 235, 204, 0.4);
+}
+
+@media only screen and (max-width: 580px) {
+  .nav {
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navend {
+    display: none;
+  }
+
+  .mainbox {
+    width: 100%;
+    height: 1800px;
+  }
+
+  .contentbox {
+    width: 100%;
+  }
+
+  .gridbox-1 {
+    grid-template-columns: 1fr;
+  }
+
+  .gridbox-2 {
+    grid-template-columns: 100%;
+    grid-gap: 100px;
+    grid-template-areas: "차트" "태스크";
+  }
+
+  .chartbox {
+    height: 280px;
+  }
+}/*# sourceMappingURL=Portfolioex3.css.map */
