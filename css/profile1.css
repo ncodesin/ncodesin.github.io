@@ -1,0 +1,126 @@
+html {
+    min-width: 576px;
+}
+body {
+    margin: 0;
+    background-color: rgb(237, 237, 237, 0.5);
+    padding: 100px;
+}
+.flex-grow-1 p {
+    margin: 3px;
+    margin-left: 10px;
+}
+.headerbox {
+    background-color: aliceblue;
+    padding: 30px;
+    margin-bottom: 100px;
+    display: flex;
+}
+.header-1 {
+    width: 300px;
+}
+.headflex {
+    display: flex;
+}
+.locate {
+    color: rgb(105, 215, 243);
+}
+.btn-primary {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.header-r {
+    padding: 20px;
+}
+.header-r-1 {
+    border-left: 3px solid rgb(133, 128, 128, 0.6);
+    padding-left: 40px;
+}
+.menu-1 {
+    background-color: rgb(237, 237, 237, 0.5);
+}
+.nav {
+    margin: 15px;
+}
+.footer-card {
+    display: flex;
+    width: 100%;
+}
+.ftcard {
+    background-color: white;
+    margin: 10px;
+}
+.card-1 {
+    width: 25%;
+    height: 300px;
+}
+.card-1 p {
+    font-size: 12px;
+    margin: 0mm;
+}
+.card-2 {
+    width: 50%;
+    height: 500px;
+}
+.card-2 span {
+    padding: 5px;
+    margin: 5px;
+    border: 2px solid rgb(237, 237, 237, 1);
+    border-radius: 10px;
+    font-size: 15px;
+}
+.card-3 {
+    text-align: center;
+}
+.blogtag {
+    color: rgb(140, 219, 250);
+    font-size: 13px;
+}
+.fa-instagram {
+    font-size: 40px;
+}
+.card-r {
+    width: 25%;
+    height: 500px;
+}
+.card-centerline {
+    padding-bottom: 150px;
+    border-bottom: 3px solid rgb(133, 128, 128, 0.6);
+}
+.card-4 {
+    margin: 10px;
+}
+.lastheader {
+    font-size: 14px;
+    border-bottom: rgb(216, 191, 216, 0.5) 3px solid;
+    padding-bottom: 15px;
+}
+.peoplejob {
+    font-size: 13px;
+}
+.locate-1 {
+    font-size: 13px;
+}
+@media screen and (max-width:850px) {
+    .headerbox {
+        flex-wrap: wrap;
+    }
+    .footer-card {
+        flex-direction: column;
+    }
+    .pimg {
+        margin-left: 30px;
+    }
+    .header-r-1 {
+        border-left: 0px;
+    }
+    .card-1 {
+        width: 100%;
+    }
+    .card-2 {
+        width: 100%;
+    }
+    .card-r {
+        width: 100%;
+    }
+}
