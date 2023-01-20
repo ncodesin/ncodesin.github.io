@@ -1,0 +1,24 @@
+.test {
+  fill: none;
+  width: 500px;
+  stroke-width: 5px;
+}
+.test path {
+  stroke: black;
+  stroke-dasharray: 422.99;
+  stroke-dashoffset: 422.99;
+  -webkit-animation: test 5s infinite;
+          animation: test 5s infinite;
+}
+
+@-webkit-keyframes test {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes test {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}/*# sourceMappingURL=Test.module.css.map */

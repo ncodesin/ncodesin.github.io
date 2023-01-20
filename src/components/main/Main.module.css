@@ -1,0 +1,128 @@
+@font-face {
+  font-family: "HS-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/HS-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "OKDDUNG";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/OKDDUNG.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+.Mainbox {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+.Maintext {
+  position: absolute;
+  width: 800px;
+  height: 300px;
+  z-index: 0;
+  top: 25%;
+  left: 50%;
+  margin-left: -400px;
+  margin-top: -150px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Maintext p {
+  font-family: "HS-Regular";
+  color: white;
+  font-size: 45px;
+  cursor: pointer;
+}
+
+.box {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.box span:nth-child(1) {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: block;
+  box-sizing: border-box;
+  transform: rotate(0deg);
+}
+.box span:nth-child(2) {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: block;
+  box-sizing: border-box;
+  transform: rotate(180deg);
+}
+.box span:before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 2px;
+  background: white;
+  -webkit-animation: animate 4s linear infinite;
+          animation: animate 4s linear infinite;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+  50% {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  50.1% {
+    transform: scaleX(1);
+    transform-origin: right;
+  }
+  100% {
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+}
+
+@keyframes animate {
+  0% {
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+  50% {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  50.1% {
+    transform: scaleX(1);
+    transform-origin: right;
+  }
+  100% {
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+}
+.enter {
+  position: absolute;
+  top: 50%;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: rgb(255, 250, 250);
+}
+.enter span {
+  font-family: "HS-Regular";
+  font-size: 25px;
+  cursor: pointer;
+  transition: transform ease-out;
+}/*# sourceMappingURL=Main.module.css.map */

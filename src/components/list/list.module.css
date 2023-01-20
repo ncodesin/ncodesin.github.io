@@ -1,0 +1,128 @@
+@font-face {
+  font-family: "BinggraeMelona-Bold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/BinggraeMelona-Bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+.outbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 100%;
+  height: 100vh;
+}
+.outbox span {
+  font-family: "BinggraeMelona-Bold";
+  font-size: 3rem;
+  -webkit-text-stroke: 1px snow;
+  cursor: pointer;
+  background-image: linear-gradient(0deg, snow, snow);
+  -webkit-background-clip: text;
+  color: transparent;
+  background-repeat: no-repeat;
+  background-position: 0% 0%;
+  background-size: 0% 100%;
+  transition: background-size 0.25s ease-in;
+}
+.outbox span:nth-child(1) {
+  background-position: 100% 0%;
+  background-size: 0% 100%;
+}
+.outbox span:nth-child(3) {
+  background-position: 0% 50%;
+  background-size: 100% 0%;
+}
+.outbox span:nth-child(4) {
+  background-image: linear-gradient(30deg, red 30%, skyblue 40%, green, yellow 70%) !important;
+  background-position: 50% 0%;
+  background-size: 0% 100%;
+}
+.outbox span:nth-child(5) {
+  background-position: 0% 0%;
+  background-size: 100% 0%;
+}
+.outbox span:nth-child(6) {
+  background-position: 0% 100%;
+  background-size: 100% 0%;
+}
+.outbox span:hover {
+  background-size: 100% 100%;
+  filter: drop-shadow(0 0 10px white);
+}
+.outbox .pos {
+  width: 100%;
+  height: 300px;
+}
+.outbox .aboutBox {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.outbox .abBox {
+  display: flex;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 800px;
+  height: 800px;
+  background-color: white;
+}
+.outbox .abBox .lastbox {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.outbox .abBox .lastbox .p1 {
+  margin: 0;
+  padding: 0;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  border: 1px solid black;
+  width: 100%;
+  background-color: bisque;
+  font-size: 20px;
+}
+.outbox .abBox .lastbox .p2 {
+  width: 100%;
+  padding: 0;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  margin: 0;
+  cursor: pointer;
+  font-size: 20px;
+  border: 0.5px solid black;
+  transition: all 0.5s;
+}
+.outbox .abBox .lastbox .p2:hover {
+  background-color: silver;
+}
+.outbox .abBox .lastbox .imgbox {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.outbox .abBox .lastbox .imgbox div {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.outbox .abBox .lastbox .imgbox div p {
+  margin: 0;
+  padding: 10px;
+  font-size: 18px;
+}/*# sourceMappingURL=list.module.css.map */

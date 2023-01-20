@@ -1,0 +1,18 @@
+.test {
+  fill: none;
+  width: 500px;
+  stroke-width: 5px;
+  path {
+    stroke: black;
+    stroke-dasharray: 422.99;
+    stroke-dashoffset: 422.99;
+    animation: test 5s infinite;
+    // stroke-dasharray: ;
+  } //   position: absolute;
+}
+
+@keyframes test {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}

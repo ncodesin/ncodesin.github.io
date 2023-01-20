@@ -1,0 +1,156 @@
+.outbox {
+  background-color: dimgrey;
+  //   text-align: center;
+  //   align-items: center;
+  // max-width: 1500px;
+  width: 800px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  // position: absolute;
+  // overflow: hidden;
+  // left: 0%;
+  //   margin-left: 30px;
+  //   background-color: white;
+  //   margin-left: 330px;
+}
+.windowbox {
+  position: fixed;
+  // max-width: 1000px;
+  top: 0;
+  left: 0;
+  display: flex;
+  // width: 100%;
+  // height: 500px;
+  background-color: rgb(0, 0, 0, 0.3);
+  justify-content: center;
+  align-items: center;
+  .contentbox {
+    position: relative;
+    margin: auto;
+    // top: 20%;
+    // left: 25%;
+    background-color: white;
+    width: 705px;
+    height: 60%;
+    border: 1px solid white;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px 2px rgb(0, 0, 0, 0.5);
+    font-family: "KyoboHand";
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    // scrollbar-color: black;
+  }
+  .xrote {
+    transition: all 0.5s;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+  .xrote:hover {
+    cursor: pointer;
+    transform: rotate(80deg);
+  }
+  .sticky1 {
+    width: 100%;
+    height: 1800px;
+    .contentimg {
+      // float: right;
+      // position: absolute;
+      display: block;
+      // margin: auto;
+      border-radius: 5px;
+    }
+    .styimg {
+      // box-sizing: content-box;
+      position: sticky;
+      // width: 705px;
+      // display: block;
+      top: 200px;
+      float: right;
+      // border: 1px solid white;
+      // border-radius: 5px;
+      transition: all 0.5s;
+    }
+    .textcontent {
+      width: 50%;
+      // position: sticky;
+      // top: 250px;
+      font-size: 20px;
+      padding: 10px;
+      float: left;
+      transition: all 0.5s;
+    }
+  }
+  .seoul {
+    color: red;
+  }
+  h2 {
+    padding: 10px;
+    border-bottom: 2px solid slategrey;
+    margin: 0;
+  }
+  h3 {
+    margin: 0;
+    padding: 10px;
+    border-bottom: 2px solid slategrey;
+  }
+}
+
+.cuteimg1 {
+  transition: all 0.5s;
+}
+
+.cuteimg1:hover {
+  transform: translateY(-30px);
+}
+
+.gyeonggi {
+  color: rgb(156, 156, 105);
+}
+
+@font-face {
+  font-family: "KyoboHand";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/KyoboHand.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.test {
+  position: absolute;
+  // display: block;
+  bottom: 10%;
+  // height: 50%;
+  fill: none;
+  width: 400px;
+  stroke-width: 5.5px;
+  path {
+    stroke-linecap: round;
+    stroke: black;
+    stroke-dasharray: var(--length);
+    stroke-dashoffset: var(--length);
+    animation: test var(--duration) forwards;
+    animation-delay: var(--delay);
+  }
+}
+
+.textaniMain {
+  path {
+    stroke: pink;
+  }
+}
+
+.textaniBg {
+  path {
+    stroke: cornflowerblue;
+  }
+}
+
+@keyframes test {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}

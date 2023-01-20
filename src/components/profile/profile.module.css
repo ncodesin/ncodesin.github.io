@@ -1,0 +1,230 @@
+@media (min-width: 1100px) {
+  .page {
+    width: 1100px;
+    margin: auto;
+  }
+}
+.page {
+  height: 5000px !important;
+  background-color: aquamarine;
+}
+.page .mainbox1 {
+  background-color: cadetblue;
+  border-top: 1px solid black;
+  border-bottom: 1px soild black;
+  width: 100%;
+  height: 300vh;
+}
+.page .sticky {
+  box-sizing: border-box;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.page .section {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: snow;
+}
+.page .header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 2px solid slategray;
+  border-left: 1px solid slategray;
+  border-right: 1px solid slategray;
+  text-align: center;
+  font-family: "Pretendard-Regular";
+}
+.page .header1 {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: red;
+  -webkit-text-fill-color: white;
+  background-color: rgba(255, 182, 193, 0.6);
+}
+.page .header2 {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: blue;
+  -webkit-text-fill-color: white;
+  background-color: rgba(173, 216, 230, 0.6);
+}
+.page .header3 {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: darkgoldenrod;
+  -webkit-text-fill-color: white;
+  background-color: rgb(255, 255, 224);
+}
+.page .header4 {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: green;
+  -webkit-text-fill-color: white;
+  background-color: rgba(144, 238, 144, 0.6);
+}
+.page .content {
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: rgba(211, 211, 211, 0.1);
+  display: flex;
+  border-top: 2px lightcoral solid;
+  border-left: 1px solid slategray;
+  border-right: 1px solid slategray;
+}
+.page .content1 div:nth-child(1) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  height: 100%;
+}
+.page .content1 div:nth-child(1) img {
+  width: 28%;
+  height: 35%;
+  position: absolute;
+  border-radius: 150px;
+}
+.page .content1 div:nth-child(1) img:hover {
+  transform: rotateY(180deg);
+}
+.page .content1 div:nth-child(2) {
+  padding: 0;
+  margin: 0;
+  width: 60%;
+  flex-direction: column;
+}
+.page .content1 div:nth-child(2) h3 {
+  font-family: "Pretendard-Regular";
+  text-align: center;
+  padding: 4px;
+  position: relative;
+  width: 100%;
+  height: 40px;
+  border-bottom: 1px solid black;
+  border-left: 2px solid black;
+  transition: all 0.5s;
+  box-shadow: 1px 1px 1px 1px slategray;
+}
+.page .content1 div:nth-child(2) h3:hover {
+  transform: scale(1.1);
+  color: coral;
+}
+.page .content2 div:nth-child(1) {
+  border-right: 1px solid black;
+  color: burlywood;
+  width: 20%;
+  height: 100%;
+}
+.page .content2 div:nth-child(1) h4 {
+  font-family: "KyoboHandwriting2020A";
+  margin: 0;
+  padding-top: 9.3px;
+  padding-bottom: 9.3px;
+  text-align: center;
+  border-bottom: 1px solid black;
+  height: 20px;
+}
+.page .content2 div:nth-child(2) {
+  width: 80%;
+  height: 100%;
+}
+.page .content2 div:nth-child(2) h4 {
+  font-family: "Pretendard-Regular";
+  margin: 0;
+  padding-top: 9.3px;
+  padding-bottom: 9.3px;
+  text-align: center;
+  border-bottom: 1px solid black;
+  height: 20px;
+}
+.page .content4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.page .content4 div {
+  width: 30%;
+}
+.page .content4 img {
+  cursor: pointer;
+}
+.page .enter {
+  position: relative;
+  left: 50%;
+  top: 15%;
+  margin-left: -115px;
+  width: 230px;
+  height: 230px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: linear-gradient(50deg, coral, white);
+}
+.page .enter span {
+  font-family: "OKDDUNG";
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 25px;
+  cursor: pointer;
+  transition: transform ease-out;
+}
+.page .canvasSticky {
+  position: -webkit-sticky;
+  position: sticky;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+}
+.page .canvas {
+  position: absolute;
+  top: 20%;
+}
+.page .circletext {
+  position: absolute;
+  top: 20%;
+  width: 100%;
+  height: 500px;
+  font-size: 20px;
+  margin: 0;
+  transform-origin: 49.4% 50%;
+  -webkit-animation: text-rotate 7s linear infinite;
+          animation: text-rotate 7s linear infinite;
+}
+@-webkit-keyframes text-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes text-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.page .cirspan {
+  position: absolute;
+  top: 26.2%;
+  left: 49.4%;
+  transform-origin: 0 120px;
+}
+
+@font-face {
+  font-family: "KyoboHandwriting2020A";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/KyoboHandwriting2020A.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}/*# sourceMappingURL=profile.module.css.map */

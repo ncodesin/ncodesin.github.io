@@ -1,0 +1,306 @@
+@media (min-width: 1100px) {
+  .page {
+    width: 1100px;
+    margin: auto;
+  }
+}
+
+.page {
+  //   width: 100%;
+  // border: 1px solid slategray;
+  height: 5000px !important;
+  background-color: aquamarine;
+  // overflow-x: hidden;
+
+  .mainbox1 {
+    background-color: cadetblue;
+    border-top: 1px solid black;
+    border-bottom: 1px soild black;
+    width: 100%;
+    height: 300vh;
+    // overflow-x: hidden;
+    // margin-top: 100vh;
+  }
+
+  .sticky {
+    // border: 3px solid salmon;
+    box-sizing: border-box;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .section {
+    // border: 2px solid black;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: snow;
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 2px solid slategray;
+    border-left: 1px solid slategray;
+    border-right: 1px solid slategray;
+    // border-radius: 5px;
+    // background-color: #fff;
+    text-align: center;
+    font-family: "Pretendard-Regular";
+  }
+
+  .header1 {
+    // color: pink;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: red;
+    -webkit-text-fill-color: white;
+    background-color: rgb(255, 182, 193, 0.6);
+  }
+
+  .header2 {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: blue;
+    -webkit-text-fill-color: white;
+    background-color: rgb(173, 216, 230, 0.6);
+  }
+
+  .header3 {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: darkgoldenrod;
+    -webkit-text-fill-color: white;
+    background-color: rgb(255, 255, 224);
+  }
+
+  .header4 {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: green;
+    -webkit-text-fill-color: white;
+    background-color: rgb(144, 238, 144, 0.6);
+  }
+
+  .content {
+    // overflow: scroll;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: rgb(211, 211, 211, 0.1);
+    // margin-top: 20px;
+    display: flex;
+    border-top: 2px lightcoral solid;
+    border-left: 1px solid slategray;
+    border-right: 1px solid slategray;
+  }
+
+  .content1 {
+    div:nth-child(1) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40%;
+      height: 100%;
+
+      // border-right: 2px solid slategray;
+      img {
+        width: 28%;
+        height: 35%;
+        position: absolute;
+        border-radius: 150px;
+      }
+
+      img:hover {
+        transform: rotateY(180deg);
+      }
+    }
+
+    div:nth-child(2) {
+      // display: flex;
+      padding: 0;
+      margin: 0;
+      width: 60%;
+      flex-direction: column;
+
+      h3 {
+        font-family: "Pretendard-Regular";
+        text-align: center;
+        padding: 4px;
+        position: relative;
+        width: 100%;
+        height: 40px;
+        border-bottom: 1px solid black;
+        border-left: 2px solid black;
+        transition: all 0.5s;
+        box-shadow: 1px 1px 1px 1px slategray;
+      }
+
+      h3:hover {
+        transform: scale(1.1);
+        color: coral;
+      }
+    }
+  }
+
+  .content2 {
+    // display: flex;
+    // flex-direction: column;
+    div:nth-child(1) {
+      border-right: 1px solid black;
+      color: burlywood;
+      width: 20%;
+      height: 100%;
+
+      // display: flex;
+      // flex-direction: column;
+      // justify-content: center;
+      // align-items: center;
+      h4 {
+        font-family: "KyoboHandwriting2020A";
+        margin: 0;
+        padding-top: 9.3px;
+        padding-bottom: 9.3px;
+        // margin-top:5px;
+        // padding-bottom: 5px;
+        text-align: center;
+        // align-items: center;
+        border-bottom: 1px solid black;
+        height: 20px;
+      }
+    }
+
+    div:nth-child(2) {
+      // border-right: 1px solid black;
+      width: 80%;
+      height: 100%;
+
+      h4 {
+        // font-family: 'KyoboHandwriting2020A';
+        font-family: "Pretendard-Regular";
+        margin: 0;
+        padding-top: 9.3px;
+        padding-bottom: 9.3px;
+        // margin-top:5px;
+        // padding-bottom: 5px;
+        text-align: center;
+        // align-items: center;
+        border-bottom: 1px solid black;
+        height: 20px;
+      }
+    }
+  }
+  .content4 {
+    display: flex;
+    // flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    div {
+      width: 30%;
+    }
+    img {
+      cursor: pointer;
+    }
+    img:hover {
+      h3 {
+      }
+    }
+  }
+  // .content3{
+  //   display: none;
+  // }
+
+  .enter {
+    // position: absolute;
+    // top: 65%;
+    position: relative;
+    left: 50%;
+    top: 15%;
+    // margin-top: -115px;
+    margin-left: -115px;
+    width: 230px;
+    height: 230px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: linear-gradient(50deg, coral, white);
+
+    // transition: transform ease-out;
+    span {
+      font-family: "OKDDUNG";
+      color: rgb(0, 0, 0, 0.7);
+      font-size: 25px;
+      cursor: pointer;
+      transition: transform ease-out;
+    }
+  }
+
+  .canvasSticky {
+    position: sticky;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+  }
+
+  .canvas {
+    position: absolute;
+    top: 20%;
+  }
+
+  .circletext {
+    position: absolute;
+    // display: flex;
+    top: 20%;
+    // left: -0.5%;
+    width: 100%;
+    height: 500px;
+    font-size: 20px;
+    // font-weight: lighter;
+    margin: 0;
+    // justify-content: center;
+    // align-items: center;
+    // align-content: center;
+    transform-origin: 49.4% 50%;
+    animation: text-rotate 7s linear infinite;
+  }
+  @keyframes text-rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  .cirspan {
+    position: absolute;
+    top: 26.2%;
+    left: 49.4%;
+    // font-weight: lighter;
+    // top: 20%;
+    // font-size: 20px;
+    // -webkit-text-stroke-color: green;
+    // -webkit-text-stroke-width: 1px;
+    transform-origin: 0 120px;
+    // transition: all 1s;
+  }
+  // .cirspan:hover {
+  //   transform: scale(1.1);
+  // }
+}
+
+@font-face {
+  font-family: "KyoboHandwriting2020A";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/KyoboHandwriting2020A.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}

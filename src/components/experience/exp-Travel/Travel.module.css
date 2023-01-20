@@ -1,0 +1,87 @@
+.outbox {
+  background-color: dimgrey;
+  width: 800px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+
+.test {
+  position: absolute;
+  bottom: 10%;
+  fill: none;
+  width: 400px;
+  stroke-width: 5.5px;
+}
+.test path {
+  stroke-linecap: round;
+  stroke: black;
+  stroke-dasharray: var(--length);
+  stroke-dashoffset: var(--length);
+}
+
+.textaniMain path {
+  stroke: yellow;
+  -webkit-animation: test var(--duration1) ease-in forwards;
+          animation: test var(--duration1) ease-in forwards;
+  -webkit-animation-delay: var(--delay1);
+          animation-delay: var(--delay1);
+}
+
+.textaniBg path {
+  stroke: black;
+  -webkit-animation: test var(--duration) ease forwards;
+          animation: test var(--duration) ease forwards;
+  -webkit-animation-delay: var(--delay);
+          animation-delay: var(--delay);
+}
+
+@-webkit-keyframes test {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes test {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+.outbox2 {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+}
+
+.ttextani {
+  position: absolute;
+  left: 25%;
+  bottom: 20%;
+  fill: none;
+  width: 300px;
+  stroke-width: 5.5px;
+}
+.ttextani path {
+  stroke-linecap: round;
+  stroke-dasharray: var(--length);
+  stroke-dashoffset: var(--length);
+  stroke: black;
+  -webkit-animation: test1 var(--duration) ease-in forwards;
+          animation: test1 var(--duration) ease-in forwards;
+  -webkit-animation-delay: var(--delay);
+          animation-delay: var(--delay);
+}
+
+@-webkit-keyframes test1 {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes test1 {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}/*# sourceMappingURL=Travel.module.css.map */
