@@ -2,7 +2,7 @@
   "name": "project0",
   "version": "0.1.0",
   "private": true,
-  "homepage": "ncodesin.github.io/portfolio1/",
+  "homepage": "ncodesin.github.io/PF1/",
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.6",
     "@testing-library/jest-dom": "^5.16.5",
