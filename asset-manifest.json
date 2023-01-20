@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/static/css/main.06918be8.css",
+    "main.js": "/static/js/main.297159fc.js",
+    "static/js/787.a7168588.chunk.js": "/static/js/787.a7168588.chunk.js",
+    "static/media/snowball.png": "/static/media/snowball.2d0731ddca18db785b2a.png",
+    "static/media/snow1.png": "/static/media/snow1.2737d2c222a59f31a2fd.png",
+    "static/media/gsap.png": "/static/media/gsap.c9563dfc35d43642602e.png",
+    "static/media/github.png": "/static/media/github.10fb52bfd2752e8b23c0.png",
+    "static/media/leaf1.png": "/static/media/leaf1.fd05f70c28d0fdf136b7.png",
+    "static/media/insta.png": "/static/media/insta.1b2d402f8bb03f1fb592.png",
+    "static/media/Crop File.jpg": "/static/media/Crop File.1e03180e697950974927.jpg",
+    "static/media/react.png": "/static/media/react.65ca18b4e9841f85a691.png",
+    "static/media/jQuery.png": "/static/media/jQuery.5218d846e86fbcafcc5d.png",
+    "static/media/html5.png": "/static/media/html5.fb627e76c05a9a6c7444.png",
+    "static/media/css3.png": "/static/media/css3.ea63097553654f07d95c.png",
+    "static/media/cute1.png": "/static/media/cute1.3fefa1fcce2bf26e667b.png",
+    "static/media/gitbash.png": "/static/media/gitbash.7e19ced30f7817541e65.png",
+    "static/media/js.png": "/static/media/js.76536eb2b86398277df3.png",
+    "static/media/vue.png": "/static/media/vue.4626039760cedf966189.png",
+    "static/media/ansheet.png": "/static/media/ansheet.2d45219071ac5b420650.png",
+    "static/media/redux.png": "/static/media/redux.1edba70acbe0a2484e24.png",
+    "static/media/canvas.png": "/static/media/canvas.edce47ef0e6f1f2c6ff8.png",
+    "static/media/blog.png": "/static/media/blog.7c4d1ab2195f65089a0a.png",
+    "index.html": "/index.html",
+    "main.06918be8.css.map": "/static/css/main.06918be8.css.map",
+    "main.297159fc.js.map": "/static/js/main.297159fc.js.map",
+    "787.a7168588.chunk.js.map": "/static/js/787.a7168588.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.06918be8.css",
+    "static/js/main.297159fc.js"
+  ]
+}
