@@ -19,7 +19,7 @@ function App() {
 
     <>
       <AnimatePresence>
-        <Routes location={location} key={location.pathname}>
+        <Routes basename={process.env.PUBLIC_URL} location={location} key={location.pathname}>
           <Route exact path="/" element={
             <>
               <Main />
