@@ -44,7 +44,16 @@ export class Snowghost {
         context.save();
         context.translate(this.x, this.y);
         context.rotate(closest.rotation);
-
+        
+        if(window.innerHeight<1000){
+            context.scale(0.5, 0.5);
+            
+        }
+        if(window.innerHeight>1000){
+            context.scale(1, 1);
+            
+        }
+        
         // context.fillStyle = 'black';
         context.drawImage(this.img,
             this.imgWidth * this.curFrame,

@@ -180,7 +180,8 @@ const Main = () => {
     const canvasRef2 = useRef(null)
 
     useEffect(() => {
-
+        let a = `{${window.innerWidth},${window.innerHeight}}`
+        console.log(a)
 
         class Hillapp {
             constructor() {
