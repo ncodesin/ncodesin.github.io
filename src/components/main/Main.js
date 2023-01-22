@@ -136,10 +136,46 @@ const Main = () => {
         function mgbutton(element) {
             const children = element?.children[0]
 
-            element.addEventListener('mousemove', e => {
+            // element.addEventListener('mousemove', e => {
+            //     const { offsetLeft, offsetTop, offsetWidth, offsetHeight } = element
+            //     const left = e.pageX - offsetLeft
+            //     const top = e.pageY - offsetTop
+            //     const centerX = left - offsetWidth / 2
+            //     const centerY = top - offsetHeight / 2
+            //     const d = Math.sqrt(centerX ** 2 + centerY ** 2)
+            //     // console.log(centerX, centerY, d);
+
+            //     // element.style.transform = `
+            //     //     translate3d(${centerX / 1.5}px, ${centerY / 1.5}px, 0)
+            //     // `
+
+            //     gsap.to(a, {
+            //         x: centerX / 1.5,
+            //         y: centerY / 1.5,
+            //         ease: Elastic.easeOut
+            //     })
+
+            //     children.style.transform = `
+            //     translate3d(${centerX / 4}px, ${centerY / 4}px, 0)
+            //     rotate3d(${-centerY / 100}, ${centerX / 100}, 0, ${d / 10}deg)
+            //     `
+            // })
+
+            // element.addEventListener('mouseleave', () => {
+            //     // element.style.transform = ''
+            //     children.style.transform = ''
+
+            //     gsap.to(a, 3, {
+            //         x: 0,
+            //         y: 0,
+            //         ease: Elastic.easeOut.config(1.5, 0.1)
+            //     })
+            // })
+
+            element.addEventListener('touchmove', e => {
                 const { offsetLeft, offsetTop, offsetWidth, offsetHeight } = element
-                const left = e.pageX - offsetLeft
-                const top = e.pageY - offsetTop
+                const left = e.changedTouches[0].pageX - offsetLeft
+                const top = e.changedTouches[0].pageY - offsetTop
                 const centerX = left - offsetWidth / 2
                 const centerY = top - offsetHeight / 2
                 const d = Math.sqrt(centerX ** 2 + centerY ** 2)
@@ -161,7 +197,7 @@ const Main = () => {
                 `
             })
 
-            element.addEventListener('mouseleave', () => {
+            element.addEventListener('touchend', () => {
                 // element.style.transform = ''
                 children.style.transform = ''
 
@@ -171,6 +207,8 @@ const Main = () => {
                     ease: Elastic.easeOut.config(1.5, 0.1)
                 })
             })
+
+
 
         }
 

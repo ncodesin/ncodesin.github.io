@@ -40,18 +40,12 @@
   justify-content: center;
   align-items: center;
   p {
+    transition: font-size 1s;
     font-family: "HS-Regular";
     color: white;
     font-size: 45px;
     // border: 1px solid white;
     cursor: pointer;
-  }
-}
-@media(max-width:650px){
-  .Maintext{
-    P{
-      font-size: 30px;
-    }
   }
 }
 
@@ -63,6 +57,7 @@
 }
 
 .enter {
+  transition: top 1s;
   // display: none;
   position: absolute;
   top: 50%;
@@ -79,5 +74,15 @@
     font-size: 25px;
     cursor: pointer;
     transition: transform ease-out;
+  }
+}
+@media(max-width:650px){
+  .Maintext{
+    P{
+      font-size: 30px;
+    }
+  }
+  .enter{
+    top:35%;
   }
 }
