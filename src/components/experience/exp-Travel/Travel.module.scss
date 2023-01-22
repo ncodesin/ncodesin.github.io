@@ -55,6 +55,7 @@
   display: flex;
   justify-content: center;
   justify-items: center;
+  // position: absolute;
 }
 
 .ttextani {
@@ -79,5 +80,23 @@
 @keyframes test1 {
   100% {
     stroke-dashoffset: 0;
+  }
+}
+
+@media (max-width:750px){
+  .outbox{
+    width: 550px;
+  }
+  .outbox2{
+    position: absolute;
+    top:70%;
+    left: 50%;
+    margin-left: -150px;
+  }
+}
+
+@media (max-height:850px){
+  .test{
+    width: 250px;
   }
 }

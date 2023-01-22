@@ -423,7 +423,8 @@ function Jobseoul() {
             >
                 <div ref={windowboxRef} className={styles.windowbox}>
                     <div ref={stcontrolRef} onScroll={() => { abc() }} className={styles.contentbox}>
-                        <img ref={xroteRef} onMouseOver={() => {
+                        <img ref={xroteRef} 
+                        onMouseOver={() => {
                             over()
                         }} onMouseLeave={() => {
                             leave()

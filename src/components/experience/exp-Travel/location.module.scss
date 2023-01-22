@@ -15,7 +15,8 @@
     // top: 20%;
     // left: 25%;
     background-color: white;
-    width: 600px;
+    width: 80%;
+    max-width: 600px;
     height: 50%;
     border: 1px solid white;
     border-radius: 5px;
@@ -32,7 +33,8 @@
     // top: 20%;
     // left: 25%;
     background-color: white;
-    width: 705px;
+    width: 90%;
+    max-width: 705px;
     height: 70%;
     border: 1px solid white;
     border-radius: 5px;
@@ -98,6 +100,16 @@
     padding: 10px;
     border-bottom: 2px solid slategrey;
   }
+  @media (max-width:750px){
+    .contentbox{
+      font-size: 13px;
+    }
+    .ctimagebox{
+      img{
+        height: 300px;
+      }
+    }
+  }
 }
 
 .outcontent {
@@ -126,6 +138,11 @@
   }
   .heart:first-of-type {
     padding-left: 10px;
+  }
+}
+@media (max-width:750px){
+  .outcontent{
+    font-size: 15px;
   }
 }
 .outcontent:hover {

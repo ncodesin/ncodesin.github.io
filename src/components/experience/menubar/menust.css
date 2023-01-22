@@ -17,10 +17,7 @@
 
 .placeholder-t {
   border-radius: 5px;
-  width: 150px;
   height: 30px;
-  flex: 1;
-  display: flex;
   align-items: center;
 }
 .placeholder-t span {
@@ -34,4 +31,15 @@
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-2@1.0/Humanbumsuk.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
+}
+@media (max-width: 850px) {
+  .background {
+    width: 200px;
+  }
+  .placeholder-t {
+    width: 80px;
+  }
+  .placeholder-t span {
+    font-size: 12px;
+  }
 }/*# sourceMappingURL=menust.css.map */

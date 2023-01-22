@@ -11,7 +11,8 @@
   position: relative;
   margin: auto;
   background-color: white;
-  width: 600px;
+  width: 80%;
+  max-width: 600px;
   height: 50%;
   border: 1px solid white;
   border-radius: 5px;
@@ -25,7 +26,8 @@
   position: relative;
   margin: auto;
   background-color: white;
-  width: 705px;
+  width: 90%;
+  max-width: 705px;
   height: 70%;
   border: 1px solid white;
   border-radius: 5px;
@@ -85,6 +87,14 @@
   padding: 10px;
   border-bottom: 2px solid slategrey;
 }
+@media (max-width: 750px) {
+  .windowbox .contentbox {
+    font-size: 13px;
+  }
+  .windowbox .ctimagebox img {
+    height: 300px;
+  }
+}
 
 .outcontent {
   margin: 5px;
@@ -115,6 +125,11 @@
   padding-left: 10px;
 }
 
+@media (max-width: 750px) {
+  .outcontent {
+    font-size: 15px;
+  }
+}
 .outcontent:hover {
   cursor: pointer;
   transform: scale(1.1) translateX(20px);

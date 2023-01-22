@@ -87,20 +87,38 @@ function Profile() {
                 // }
             }
             animate() {
-                this.child.forEach((v, i) => {
-                    const anilenght = (this.end - this.start) / this.length
-                    const s = this.start + anilenght * i + 100
-                    const e = this.start + anilenght * (i + 1)
+                if(window.innerWidth<750){
+                    this.child.forEach((v, i) => {
+                        const anilenght = (this.end - this.start) / this.length
+                        const s = this.start + anilenght * i - 100
+                        const e = this.start + anilenght * i
+    
+                        if (window.scrollY <= s) {
+                            v.style.transform = `translate3d(0, 0, 0)`
+                        } else if (window.scrollY >= e) {
+                            v.style.transform = `translate3d(0, ${-this.contentVh}%, 0)`
+                        } else {
+                            v.style.transform = `translate3d(0, ${(window.scrollY - s) / (anilenght - 100) * (-this.contentVh)
+                                }%, 0)`
+                        }
+                    })
+                }else{
 
-                    if (window.scrollY <= s) {
-                        v.style.transform = `translate3d(0, 0, 0)`
-                    } else if (window.scrollY >= e) {
-                        v.style.transform = `translate3d(0, ${-this.contentVh}%, 0)`
-                    } else {
-                        v.style.transform = `translate3d(0, ${(window.scrollY - s) / (anilenght - 100) * (-this.contentVh)
-                            }%, 0)`
-                    }
-                })
+                    this.child.forEach((v, i) => {
+                        const anilenght = (this.end - this.start) / this.length
+                        const s = this.start + anilenght * i + 100
+                        const e = this.start + anilenght * (i + 1)
+    
+                        if (window.scrollY <= s) {
+                            v.style.transform = `translate3d(0, 0, 0)`
+                        } else if (window.scrollY >= e) {
+                            v.style.transform = `translate3d(0, ${-this.contentVh}%, 0)`
+                        } else {
+                            v.style.transform = `translate3d(0, ${(window.scrollY - s) / (anilenght - 100) * (-this.contentVh)
+                                }%, 0)`
+                        }
+                    })
+                }
             }
         }
         const scrollpage = new ScrollPage(mainct, realsticky, section, header, content);
@@ -168,6 +186,42 @@ function Profile() {
             })
 
             element.addEventListener('mouseleave', () => {
+                // element.style.transform = ''
+                children.style.transform = ''
+
+                let two = gsap.to(buttonRef.current, 1.5, {
+                    x: 0,
+                    y: 0,
+                    ease: Elastic.easeOut.config(1, 0.1)
+                })
+            })
+
+            element.addEventListener('touchmove', e => {
+                const { offsetLeft, offsetTop, offsetWidth, offsetHeight } = element
+                const left = e.changedTouches[0].pageX - offsetLeft
+                const top = e.changedTouches[0].pageY - offsetTop
+                const centerX = left - offsetWidth / 2
+                const centerY = top - offsetHeight / 2
+                const d = Math.sqrt(centerX ** 2 + centerY ** 2)
+                console.log(centerX, centerY, d);
+
+                // element.style.transform = `
+                //     translate3d(${centerX / 1.5}px, ${centerY / 1.5}px, 0)
+                // `
+
+                let one = gsap.to(buttonRef.current, {
+                    x: centerX / 1.5,
+                    y: centerY / 1.5,
+                    ease: Elastic.easeOut
+                })
+
+                children.style.transform = `
+                translate3d(${centerX / 4}px, ${centerY / 4}px, 0)
+                rotate3d(${-centerY / 100}, ${centerX / 100}, 0, ${d / 10}deg)
+                `
+            })
+
+            element.addEventListener('touchend', () => {
                 // element.style.transform = ''
                 children.style.transform = ''
 
@@ -403,13 +457,24 @@ function Profile() {
                     this.h = 80
                     // this.xSpeed = 0.5
                 }
-                context.drawImage(
-                    v,
-                    this.x,
-                    this.y,
-                    this.w,
-                    this.h
-                );
+                if(window.innerWidth<750){
+                    context.drawImage(
+                        v,
+                        this.x,
+                        this.y,
+                        this.w/1.5,
+                        this.h/1.5
+                    );
+                } else {
+
+                    context.drawImage(
+                        v,
+                        this.x,
+                        this.y,
+                        this.w,
+                        this.h
+                    );
+                }
 
             }
 
@@ -533,6 +598,39 @@ function Profile() {
         }
     })
 
+    const content1hRef = useRef(null);
+    useEffect(()=>{
+        const content1h = content1hRef.current;
+        console.log(content1h.children)
+        const abc = content1h.children
+        const chArray = []
+        for(let i = 0; i < abc.length; i++){
+            chArray.push(abc[i])
+        }
+        if(window.innerWidth<750){
+            chArray.forEach((v,i)=>{
+                v.style.height = 20 + 'px'
+            })
+        } else {
+            chArray.forEach((v,i)=>{
+                v.style.height = 40 + 'px'
+            })
+        }
+
+        window.addEventListener('resize',()=>{
+            if(window.innerWidth<750){
+                chArray.forEach((v,i)=>{
+                    v.style.height = 20 + 'px'
+                })
+            } else {
+                chArray.forEach((v,i)=>{
+                    v.style.height = 40 + 'px'
+                })
+            }
+            console.log(window.innerWidth)
+        })
+    })
+
 
 
 
@@ -580,7 +678,7 @@ function Profile() {
                                 <div>
                                 </div>
                             </div>
-                            <div>
+                            <div ref={content1hRef}>
                                 <h3>Name : 곽신우 (郭信玗)</h3>
                                 <h3>Age : 30</h3>
                                 <h3>Location : 서울 강동구 강일동 유러피안하우스2차</h3>
@@ -627,7 +725,7 @@ function Profile() {
                             <canvas ref={canvasRef3}></canvas>
                         </div>
                     </div>
-                    <div ref={addToRefs} className={styles.section}>
+                    {/* <div ref={addToRefs} className={styles.section}>
                         <div ref={addToheader} className={`${styles.header} ${styles.header4}`}>
                             <h2>File Four : Reference</h2>
                         </div>
@@ -641,11 +739,11 @@ function Profile() {
                                 <h3>NaverBlog</h3>
                             </div>
                             <div>
-                                <img width={100} src={gitimg}></img>
+                                <img width={20 + '%'} src={gitimg}></img>
                                 <h3>Github</h3>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </div>
             <div ref={buttonRef} className={styles.enter}>

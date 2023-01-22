@@ -30,8 +30,9 @@
     // top: 20%;
     // left: 25%;
     background-color: white;
-    width: 705px;
-    height: 60%;
+    width: 90%;
+    max-width: 705px;
+    height: 550px;
     border: 1px solid white;
     border-radius: 5px;
     box-shadow: 1px 1px 1px 2px rgb(0, 0, 0, 0.5);
@@ -80,6 +81,17 @@
       padding: 10px;
       float: left;
       transition: all 0.5s;
+    }
+    @media (max-width:750px){
+      .textcontent{
+        font-size: 15px;
+      }
+      .styimg{
+        img{
+          width: 300px;
+          height: 250px;
+        }
+      }
     }
   }
   .seoul {
@@ -150,5 +162,20 @@
 @keyframes test {
   100% {
     stroke-dashoffset: 0;
+  }
+}
+
+@media (max-width:750px){
+  .contentbox{
+    font-size: 13px;
+  }
+  .outbox{
+    width: 550px;
+  }
+}
+
+@media (max-height:850px){
+  .test{
+    width: 250px;
   }
 }

@@ -16,10 +16,10 @@
 
 .placeholder-t {
   border-radius: 5px;
-  width: 150px;
+  // width: 150px;
   height: 30px;
-  flex: 1;
-  display: flex;
+  // flex: 1;
+  // display: flex;
   //   justify-content: center;
   align-items: center;
   span {
@@ -36,4 +36,16 @@
     format("woff2");
   font-weight: normal;
   font-style: normal;
+}
+
+@media (max-width:850px){
+  .background {
+    width: 200px;
+  }
+  .placeholder-t{
+    width: 80px;
+    span{
+      font-size: 12px;
+    }
+  }
 }
