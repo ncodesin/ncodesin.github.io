@@ -67,6 +67,7 @@ function Job() {
         <>
             <div ref={outboxRef} className={styles.outbox}>
                 <motion.div
+                    className={styles.mapscale}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{
@@ -423,14 +424,14 @@ function Jobseoul() {
             >
                 <div ref={windowboxRef} className={styles.windowbox}>
                     <div ref={stcontrolRef} onScroll={() => { abc() }} className={styles.contentbox}>
-                        <img ref={xroteRef} 
-                        onMouseOver={() => {
-                            over()
-                        }} onMouseLeave={() => {
-                            leave()
-                        }} onClick={() => {
-                            dispatch(turnseoul(0))
-                        }} src={x1} width='25' className={styles.xrote} />
+                        <img ref={xroteRef}
+                            onMouseOver={() => {
+                                over()
+                            }} onMouseLeave={() => {
+                                leave()
+                            }} onClick={() => {
+                                dispatch(turnseoul(0))
+                            }} src={x1} width='25' className={styles.xrote} />
                         <h2>Job - <span className={styles.seoul}>Seoul</span></h2>
                         <h3>기업명 : 강남 제비스코 그룹 - 강남건영</h3>
                         <h3>직무 : 안전관리자</h3>
