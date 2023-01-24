@@ -68,8 +68,8 @@
     font-size: 15px;
   }
   .windowbox .sticky1 .styimg img {
-    width: 250px;
-    height: 250px;
+    width: 150px;
+    height: 150px;
   }
 }
 .windowbox .seoul {
@@ -128,6 +128,10 @@
 
 .textaniBg path {
   stroke: cornflowerblue;
+}
+
+.mapscale {
+  transform: scale(0.5);
 }
 
 @-webkit-keyframes test {

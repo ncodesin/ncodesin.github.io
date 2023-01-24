@@ -85,14 +85,14 @@
       float: left;
       transition: all 0.5s;
     }
-    @media (max-width:750px){
-      .textcontent{
+    @media (max-width: 750px) {
+      .textcontent {
         font-size: 15px;
       }
-      .styimg{
-        img{
-          width: 250px;
-          height: 250px;
+      .styimg {
+        img {
+          width: 150px;
+          height: 150px;
         }
       }
     }
@@ -161,23 +161,26 @@
     stroke: cornflowerblue;
   }
 }
+.mapscale {
+  transform: scale(0.5);
+}
 
 @keyframes test {
   100% {
     stroke-dashoffset: 0;
   }
 }
-@media (max-width:750px){
-  .contentbox{
+@media (max-width: 750px) {
+  .contentbox {
     font-size: 13px;
   }
-  .outbox{
+  .outbox {
     width: 550px;
   }
 }
-  
-@media (max-height:850px){
-  .test{
+
+@media (max-height: 850px) {
+  .test {
     width: 250px;
   }
 }
