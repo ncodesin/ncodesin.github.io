@@ -86,7 +86,7 @@
 }
 @media (max-width: 750px) {
   .mapscale {
-    transform: scale(0.5);
+    transform: scale(0.5) translateX(70px);
   }
   .outbox {
     width: 550px;

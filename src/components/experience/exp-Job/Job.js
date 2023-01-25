@@ -1,14 +1,11 @@
-import { json } from 'react-router-dom'
 import Koreamap from '../koreamap/koreamap'
 import styles from './Job.module.css'
 import { useEffect, useRef, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { motion, transform } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { turnggdo, turnseoul } from '../../../store'
 import x1 from './x1.png'
 import cuteimg1 from './cute1.png'
-// import xx from '../../../../public/image'
-import Testline from '../svgviewer-react-output'
 
 
 
