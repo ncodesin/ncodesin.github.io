@@ -1,17 +1,18 @@
 import { useEffect, useRef, useState } from 'react';
 import styles from './list.module.css';
-import { animate, AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { useNavigate } from 'react-router-dom';
-import { useCanvas } from '../hooks/canvas';
-import snowball from './snowball.png'
 import { useDispatch, useSelector } from 'react-redux';
 import { changeList } from '../../store';
-import { nodeName } from 'jquery';
 import insta from './insta.png'
 import github from './github.png'
 import blog from './blog.png'
 import snowghostT from './ghostsheet4.png'
 import snowghostS from './snowghostsmall.png'
+import cloud1 from './cloud1.png';
+import cloud2 from './cloud2.png';
+import cloud3 from './cloud3.png';
+import { Cloud } from './Cloud';
 // import { GRcircle } from './GRcircle';
 
 
@@ -159,14 +160,20 @@ function List() {
         const githubImg = new Image();
         const snowghostTImg = new Image();
         const snowghostSImg = new Image();
+        const cloud1Img = new Image();
+        const cloud2Img = new Image();
+        const cloud3Img = new Image();
         const animationArray = []
         const TOTAL = 1
 
-        instaImg.src = insta
-        blogImg.src = blog
-        githubImg.src = github
-        snowghostTImg.src = snowghostT
-        snowghostSImg.src = snowghostS
+        instaImg.src = insta;
+        blogImg.src = blog;
+        githubImg.src = github;
+        snowghostTImg.src = snowghostT;
+        snowghostSImg.src = snowghostS;
+        cloud1Img.src = cloud1;
+        cloud2Img.src = cloud2;
+        cloud3Img.src = cloud3;
 
         const snowghostTImgrv = snowghostTImg.style.transform = 'rotateY(180deg)'
 
@@ -199,8 +206,11 @@ function List() {
 
         class ghost {
             constructor() {
-                this.Timg = snowghostTImg
-                this.Simg = snowghostSImg
+                this.Timg = snowghostTImg;
+                this.Simg = snowghostSImg;
+                this.cloud1img = cloud1Img;
+                this.cloud2img = cloud2Img;
+                this.cloud3img = cloud3Img;
                 this.TimgWidth = 135;
                 this.TimgHeight = 142;
                 this.TghostWidth = this.TimgWidth / 2;
@@ -222,6 +232,31 @@ function List() {
                 this.jump = 0.5;
                 this.jump2 = 0.5;
                 this.jump3 = 0.5;
+                this.cloud = [
+                    new Cloud(
+                        this.cloud1img,
+                        canvas.width,
+                        canvas.height,
+                        1,
+                        1,
+                        context),
+                    new Cloud(
+                        this.cloud1img,
+                        canvas.width,
+                        canvas.height,
+                        0.7,
+                        0.7,
+                        context
+                    ),
+                    new Cloud(
+                        this.cloud1img,
+                        canvas.width,
+                        canvas.height,
+                        1.3,
+                        0.7,
+                        context
+                    ),
+                ]
 
                 this.aniFrame = 10;
                 this.curFrame = 0;
@@ -349,8 +384,12 @@ function List() {
                 context.textAlign = 'center';
 
                 context.font = '30px sans-serif';
-                context.fillText('감사합니다!', canvas.width / 2, 100)
+                context.fillText('감사합니다!', canvas.width / 2, canvas.height / 2, 100)
                 context.restore();
+
+                for (let i = 0; i < this.cloud.length; i++) {
+                    this.cloud[i].animate(this.xSpeed / 2);
+                }
 
 
 
@@ -408,15 +447,15 @@ function List() {
                             <p className={styles.p1}>@ Made by Kwak (ncodesin)</p>
                             <div className={styles.imgbox}>
                                 <div>
-                                    <img src={blog} width={40} />
+                                    <img src={blog} width={40} onClick={() => { window.open('https://blog.naver.com/n_sw1230') }} />
                                     <p>NaverBlog</p>
                                 </div>
                                 <div>
-                                    <img src={insta} width={40} />
+                                    <img src={insta} width={40} onClick={() => { window.open('https://www.instagram.com/tlsdn147') }} />
                                     <p>InstaGram</p>
                                 </div>
                                 <div>
-                                    <img src={github} width={40} />
+                                    <img src={github} width={40} onClick={() => { window.open('https://github.com/ncodesin') }} />
                                     <p>Github</p>
                                 </div>
                             </div>

@@ -84,7 +84,12 @@
   width: 28%;
   height: 35%;
   position: absolute;
-  border-radius: 150px;
+  transition: all 1s;
+}
+@media (max-width: 750px) {
+  .page .content1 div:nth-child(1) img {
+    height: 30%;
+  }
 }
 .page .content1 div:nth-child(1) img:hover {
   transform: rotateY(180deg);
@@ -92,7 +97,7 @@
 .page .content1 div:nth-child(2) {
   padding: 0;
   margin: 0;
-  width: 60%;
+  width: 65%;
   flex-direction: column;
 }
 .page .content1 div:nth-child(2) h3 {
@@ -110,6 +115,11 @@
 .page .content1 div:nth-child(2) h3:hover {
   transform: scale(1.1);
   color: coral;
+}
+@media (max-width: 750px) {
+  .page .content1 div:nth-child(2) h3 {
+    height: 30px;
+  }
 }
 .page .content2 div:nth-child(1) {
   border-right: 1px solid black;
@@ -138,18 +148,6 @@
   text-align: center;
   border-bottom: 1px solid black;
   height: 20px;
-}
-.page .content4 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-.page .content4 div {
-  width: 30%;
-}
-.page .content4 img {
-  cursor: pointer;
 }
 .page .enter {
   position: relative;

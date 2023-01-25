@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import styles from './profile.module.css'
 import { gsap, Elastic } from "gsap"
 import { useNavigate } from 'react-router-dom';
-import profileimg from './Crop File.jpg'
+import profileimg from './Crop File.png'
 import canvasimg from './skills/canvas.png'
 import css3img from './skills/css3.png'
 import gitbashimg from './skills/gitbash.png'
@@ -87,12 +87,12 @@ function Profile() {
                 // }
             }
             animate() {
-                if(window.innerWidth<750){
+                if (window.innerWidth < 750) {
                     this.child.forEach((v, i) => {
                         const anilenght = (this.end - this.start) / this.length
                         const s = this.start + anilenght * i - 100
                         const e = this.start + anilenght * i
-    
+
                         if (window.scrollY <= s) {
                             v.style.transform = `translate3d(0, 0, 0)`
                         } else if (window.scrollY >= e) {
@@ -102,13 +102,13 @@ function Profile() {
                                 }%, 0)`
                         }
                     })
-                }else{
+                } else {
 
                     this.child.forEach((v, i) => {
                         const anilenght = (this.end - this.start) / this.length
                         const s = this.start + anilenght * i + 100
                         const e = this.start + anilenght * (i + 1)
-    
+
                         if (window.scrollY <= s) {
                             v.style.transform = `translate3d(0, 0, 0)`
                         } else if (window.scrollY >= e) {
@@ -457,13 +457,13 @@ function Profile() {
                     this.h = 80
                     // this.xSpeed = 0.5
                 }
-                if(window.innerWidth<750){
+                if (window.innerWidth < 750) {
                     context.drawImage(
                         v,
                         this.x,
                         this.y,
-                        this.w/1.5,
-                        this.h/1.5
+                        this.w / 1.5,
+                        this.h / 1.5
                     );
                 } else {
 
@@ -598,38 +598,38 @@ function Profile() {
         }
     })
 
-    const content1hRef = useRef(null);
-    useEffect(()=>{
-        const content1h = content1hRef.current;
-        console.log(content1h.children)
-        const abc = content1h.children
-        const chArray = []
-        for(let i = 0; i < abc.length; i++){
-            chArray.push(abc[i])
-        }
-        if(window.innerWidth<750){
-            chArray.forEach((v,i)=>{
-                v.style.height = 20 + 'px'
-            })
-        } else {
-            chArray.forEach((v,i)=>{
-                v.style.height = 40 + 'px'
-            })
-        }
+    // const content1hRef = useRef(null);
+    // useEffect(() => {
+    //     const content1h = content1hRef.current;
+    //     console.log(content1h.children)
+    //     const abc = content1h.children
+    //     const chArray = []
+    //     for (let i = 0; i < abc.length; i++) {
+    //         chArray.push(abc[i])
+    //     }
+    //     if (window.innerWidth < 750) {
+    //         chArray.forEach((v, i) => {
+    //             v.style.height = 20 + 'px'
+    //         })
+    //     } else {
+    //         chArray.forEach((v, i) => {
+    //             v.style.height = 40 + 'px'
+    //         })
+    //     }
 
-        window.addEventListener('resize',()=>{
-            if(window.innerWidth<750){
-                chArray.forEach((v,i)=>{
-                    v.style.height = 20 + 'px'
-                })
-            } else {
-                chArray.forEach((v,i)=>{
-                    v.style.height = 40 + 'px'
-                })
-            }
-            console.log(window.innerWidth)
-        })
-    })
+    //     window.addEventListener('resize', () => {
+    //         if (window.innerWidth < 750) {
+    //             chArray.forEach((v, i) => {
+    //                 v.style.height = 20 + 'px'
+    //             })
+    //         } else {
+    //             chArray.forEach((v, i) => {
+    //                 v.style.height = 40 + 'px'
+    //             })
+    //         }
+    //         console.log(window.innerWidth)
+    //     })
+    // })
 
 
 
@@ -678,7 +678,7 @@ function Profile() {
                                 <div>
                                 </div>
                             </div>
-                            <div ref={content1hRef}>
+                            <div>
                                 <h3>Name : 곽신우 (郭信玗)</h3>
                                 <h3>Age : 30</h3>
                                 <h3>Location : 서울 강동구 강일동 유러피안하우스2차</h3>
@@ -725,25 +725,6 @@ function Profile() {
                             <canvas ref={canvasRef3}></canvas>
                         </div>
                     </div>
-                    {/* <div ref={addToRefs} className={styles.section}>
-                        <div ref={addToheader} className={`${styles.header} ${styles.header4}`}>
-                            <h2>File Four : Reference</h2>
-                        </div>
-                        <div ref={addTocontent} className={`${styles.content} ${styles.content4}`}>
-                            <div>
-                                <img width={20 + '%'} src={instaimg} />
-                                <h3>Instagram</h3>
-                            </div>
-                            <div>
-                                <img width={20 + '%'} src={blogimg}></img>
-                                <h3>NaverBlog</h3>
-                            </div>
-                            <div>
-                                <img width={20 + '%'} src={gitimg}></img>
-                                <h3>Github</h3>
-                            </div>
-                        </div>
-                    </div> */}
                 </div>
             </div>
             <div ref={buttonRef} className={styles.enter}>

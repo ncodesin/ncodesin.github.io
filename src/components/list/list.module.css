@@ -70,6 +70,7 @@
   flex-direction: column;
   width: 800px;
   height: 800px;
+  overflow-x: hidden;
   background-color: white;
 }
 .outbox .abBox .lastbox {
@@ -121,8 +122,17 @@
   width: 100%;
   height: 100%;
 }
+.outbox .abBox .lastbox .imgbox div img:hover {
+  cursor: pointer;
+}
 .outbox .abBox .lastbox .imgbox div p {
   margin: 0;
   padding: 10px;
   font-size: 18px;
+}
+@media (max-width: 750px) {
+  .outbox .abBox {
+    width: 400px;
+    height: 600px;
+  }
 }/*# sourceMappingURL=list.module.css.map */
