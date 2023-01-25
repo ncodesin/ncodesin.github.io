@@ -5,7 +5,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
 }
 
 .windowbox {
@@ -70,10 +69,14 @@
 @media (max-width: 750px) {
   .windowbox .sticky1 .textcontent {
     font-size: 15px;
+    width: 40%;
+  }
+  .windowbox .sticky1 .styimg {
+    top: 280px;
   }
   .windowbox .sticky1 .styimg img {
-    width: 300px;
-    height: 250px;
+    width: 190px;
+    height: 150px;
   }
 }
 .windowbox .seoul {
@@ -148,6 +151,9 @@
 @media (max-width: 750px) {
   .contentbox {
     font-size: 13px;
+  }
+  .mapscale {
+    transform: scale(0.5);
   }
   .outbox {
     width: 550px;

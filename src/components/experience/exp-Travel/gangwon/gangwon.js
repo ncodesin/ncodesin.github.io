@@ -203,7 +203,7 @@ function Gangwon1() {
                         <h3>여행 이동수단 - 기차, 시외버스</h3>
                         <div className={styles.sticky0}>
                             <div className={styles.textcontent}>
-                                <p style={{ fontSize: 20, color: 'dimgrey', textAlign: 'center' }}>
+                                <p style={{ color: 'dimgrey', textAlign: 'center' }}>
                                     11년전 태어나서 처음 친구들과 갔었던 평창여행이후 같은해 겨울로 한번 더 강원도로 가고싶어서<br />
                                     가게된 강릉,속초 강릉 바다는 겨울바다였지만 운치가있어 좋았고, <br />
                                     속초에서 밤바다 옆 포차에서 먹는 오징어순대, 속초 시장, 그리고 워터피아까지..<br />

@@ -21,13 +21,13 @@ function Experience() {
     return (
         <>
             {/* <span style={{ color: 'white' }}>슈발</span> */}
+            <Example className={styles.button} />
             <div className={styles.page}>
 
                 {job[0] == 1 ? <Job /> : false}
                 {job[1] == 1 ? <Travel /> : false}
                 {job[2] == 1 ? <School /> : false}
             </div>
-            <Example className={styles.button} />
         </>
     )
 }

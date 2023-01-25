@@ -68,6 +68,7 @@ function School() {
     return (
         <div ref={outboxRef} className={styles.outbox}>
             <motion.div
+                className={styles.mapscale}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{
@@ -529,9 +530,9 @@ function Schooluni() {
                             <div style={{ clear: 'both' }}></div>
                             <div ref={addTotext} className={styles.textcontent}>
                                 <p>
-                                    그러면서 마지막 학기에는 형상기억합금을 주제로 전시회에 나가게 되어 저희 조가 과1위를 하게됩니다.
+                                    마지막 학기에는 형상기억합금을 주제로 전시회에 나가게 되어 저희 조가 과1위를 하게됩니다.
                                     이후 졸업과 동시에 취업을 하게 됩니다.<br />
-                                    아무 답도 없이 살던 저에게 인생의 길을 알려준 고마운 학교 였습니다.
+                                    아무 답도 없이 살던 저에게 인생의 길을 제시해준 고마운 학교 였습니다.
                                 </p>
                             </div>
                             <div ref={addTocontentimg} className={styles.styimg}>

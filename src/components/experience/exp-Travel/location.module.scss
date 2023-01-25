@@ -100,12 +100,13 @@
     padding: 10px;
     border-bottom: 2px solid slategrey;
   }
-  @media (max-width:750px){
-    .contentbox{
+  @media (max-width: 750px) {
+    .contentbox {
+      height: 80%;
       font-size: 13px;
     }
-    .ctimagebox{
-      img{
+    .ctimagebox {
+      img {
         height: 300px;
       }
     }
@@ -140,9 +141,26 @@
     padding-left: 10px;
   }
 }
-@media (max-width:750px){
-  .outcontent{
-    font-size: 15px;
+.textcontent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  p {
+    font-size: 20px;
+  }
+  // margin-bottom: 200px;
+}
+@media (max-width: 750px) {
+  .outcontent {
+    font-size: 13px;
+    .heart {
+      width: 20px;
+    }
+  }
+  .textcontent {
+    p {
+      font-size: 12px !important;
+    }
   }
 }
 .outcontent:hover {
@@ -156,10 +174,4 @@
 
 .cuteimg1:hover {
   transform: translateY(-30px);
-}
-.textcontent {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  // margin-bottom: 200px;
 }

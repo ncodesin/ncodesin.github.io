@@ -80,6 +80,7 @@ function Travel() {
     return (
         <div ref={outboxRef} className={styles.outbox}>
             <motion.div
+                className={styles.mapscale}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{

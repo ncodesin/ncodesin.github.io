@@ -130,10 +130,6 @@
   stroke: cornflowerblue;
 }
 
-.mapscale {
-  transform: scale(0.5);
-}
-
 @-webkit-keyframes test {
   100% {
     stroke-dashoffset: 0;
@@ -148,6 +144,9 @@
 @media (max-width: 750px) {
   .contentbox {
     font-size: 13px;
+  }
+  .mapscale {
+    transform: scale(0.5);
   }
   .outbox {
     width: 550px;

@@ -5,7 +5,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
 }
 
 .test {
@@ -86,14 +85,20 @@
   }
 }
 @media (max-width: 750px) {
+  .mapscale {
+    transform: scale(0.5);
+  }
   .outbox {
     width: 550px;
   }
   .outbox2 {
     position: absolute;
-    top: 70%;
+    top: 85%;
     left: 50%;
-    margin-left: -150px;
+    margin-left: -100px;
+  }
+  .ttextani {
+    width: 200px;
   }
 }
 @media (max-height: 850px) {

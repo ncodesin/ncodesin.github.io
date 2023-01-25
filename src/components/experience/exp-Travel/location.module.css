@@ -89,6 +89,7 @@
 }
 @media (max-width: 750px) {
   .windowbox .contentbox {
+    height: 80%;
     font-size: 13px;
   }
   .windowbox .ctimagebox img {
@@ -125,9 +126,24 @@
   padding-left: 10px;
 }
 
+.textcontent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.textcontent p {
+  font-size: 20px;
+}
+
 @media (max-width: 750px) {
   .outcontent {
-    font-size: 15px;
+    font-size: 13px;
+  }
+  .outcontent .heart {
+    width: 20px;
+  }
+  .textcontent p {
+    font-size: 12px !important;
   }
 }
 .outcontent:hover {
@@ -141,10 +157,4 @@
 
 .cuteimg1:hover {
   transform: translateY(-30px);
-}
-
-.textcontent {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }/*# sourceMappingURL=location.module.css.map */
