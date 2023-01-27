@@ -189,8 +189,8 @@
   font-size: 20px;
   margin: 0;
   transform-origin: 49.4% 50%;
-  -webkit-animation: text-rotate 7s linear infinite;
-          animation: text-rotate 7s linear infinite;
+  -webkit-animation: text-rotate 10s linear infinite;
+          animation: text-rotate 10s linear infinite;
 }
 @-webkit-keyframes text-rotate {
   from {
@@ -213,6 +213,13 @@
   top: 26.2%;
   left: 49.4%;
   transform-origin: 0 120px;
+}
+
+.cirspan1 {
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke-color: red;
+  -webkit-text-stroke-width: 0.4px;
+  font-size: 25px;
 }
 
 @font-face {

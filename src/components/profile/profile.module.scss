@@ -256,7 +256,7 @@
     // align-items: center;
     // align-content: center;
     transform-origin: 49.4% 50%;
-    animation: text-rotate 7s linear infinite;
+    animation: text-rotate 10s linear infinite;
   }
   @keyframes text-rotate {
     from {
@@ -281,6 +281,13 @@
   // .cirspan:hover {
   //   transform: scale(1.1);
   // }
+}
+
+.cirspan1 {
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke-color: red;
+  -webkit-text-stroke-width: 0.4px;
+  font-size: 25px;
 }
 
 @font-face {
