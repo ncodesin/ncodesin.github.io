@@ -500,7 +500,7 @@ function Profile() {
     useEffect(() => {
         function rotatespan() {
             for (var i = 1; i < cirtext.length; i++) {
-                cirtext[i].style.transform = "rotate(" + i * 13.7 + "deg)"
+                cirtext[i].style.transform = "rotate(" + i * 13 + "deg)"
             };
         }
 
@@ -647,26 +647,28 @@ function Profile() {
                         <span className={`${styles.cirspan} , ${styles.cirspan1} `} ref={addToSpan}>o</span>
                         <span className={`${styles.cirspan} , ${styles.cirspan1} `} ref={addToSpan}>l</span>
                         <span className={`${styles.cirspan} , ${styles.cirspan1} `} ref={addToSpan}>l</span>
-                        <span className={`${styles.cirspan} , ${styles.cirspan1} `} ref={addToSpan}>●</span>
+                        <span className={`${styles.cirspan} , ${styles.cirspan2} `} ref={addToSpan}>●</span>
                         <span className={`${styles.cirspan} , ${styles.cirspan1} `} ref={addToSpan}>D</span>
                         <span className={`${styles.cirspan} , ${styles.cirspan1} `} ref={addToSpan}>o</span>
                         <span className={`${styles.cirspan} , ${styles.cirspan1} `} ref={addToSpan}>w</span>
                         <span className={`${styles.cirspan} , ${styles.cirspan1} `} ref={addToSpan}>n</span>
-                        <span className={styles.cirspan} ref={addToSpan}>●</span>
+                        <span className={`${styles.cirspan} , ${styles.cirspan2} `} ref={addToSpan}>●</span>
                         <span className={styles.cirspan} ref={addToSpan}>H</span>
                         <span className={styles.cirspan} ref={addToSpan}>a</span>
                         <span className={styles.cirspan} ref={addToSpan}>v</span>
                         <span className={styles.cirspan} ref={addToSpan}>e</span>
+                        <span className={`${styles.cirspan} , ${styles.cirspan2} `} ref={addToSpan}>●</span>
                         <span className={styles.cirspan} ref={addToSpan}>a</span>
                         <span className={styles.cirspan} ref={addToSpan}>N</span>
                         <span className={styles.cirspan} ref={addToSpan}>i</span>
                         <span className={styles.cirspan} ref={addToSpan}>c</span>
                         <span className={styles.cirspan} ref={addToSpan}>e</span>
+                        <span className={`${styles.cirspan} , ${styles.cirspan2} `} ref={addToSpan}>●</span>
                         <span className={styles.cirspan} ref={addToSpan}>D</span>
                         <span className={styles.cirspan} ref={addToSpan}>a</span>
                         <span className={styles.cirspan} ref={addToSpan}>y</span>
                         <span className={styles.cirspan} ref={addToSpan}>!</span>
-                        <span className={styles.cirspan} ref={addToSpan}>●</span>
+                        <span className={`${styles.cirspan} , ${styles.cirspan2} `} ref={addToSpan}>●</span>
                     </div>
                 </div>
                 <div ref={sticky} className={styles.sticky}>
