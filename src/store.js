@@ -95,6 +95,27 @@ let travelgo = createSlice({
 
 export let { turntvgo } = travelgo.actions
 
+let skillcont = createSlice({
+    name: 'skillcont',
+    initialState: [0, 0, 0, 0],
+    reducers: {
+        cgskill1(state, a) {
+            state[0] = a.payload
+        },
+        cgskill2(state, a) {
+            state[1] = a.payload
+        },
+        cgskill3(state, a) {
+            state[2] = a.payload
+        },
+        cgskill4(state, a) {
+            state[3] = a.payload
+        }
+    }
+})
+
+export let { cgskill1, cgskill2, cgskill3, cgskill4 } = skillcont.actions
+
 
 
 export default configureStore({
@@ -103,7 +124,8 @@ export default configureStore({
         jobmap: jobmap.reducer,
         travelmap: travelmap.reducer,
         schoolmap: schoolmap.reducer,
-        travelgo: travelgo.reducer
+        travelgo: travelgo.reducer,
+        skillcont: skillcont.reducer
     }
 })
 

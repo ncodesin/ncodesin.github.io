@@ -14,12 +14,17 @@ import mongodbimg from './skills/mongodb.png'
 import reactimg from './skills/react.png'
 import reduximg from './skills/redux.png'
 import vueimg from './skills/vue.png'
+import Gitimg from './skills/Git.png'
+import framerimg from './skills/framer.png'
 import instaimg from './reference/insta.png'
 import gitimg from './reference/github.png'
 import blogimg from './reference/blog.png'
 import { render } from '@testing-library/react';
 import { motion } from "framer-motion"
 import anman from './ansheet.png'
+import arrowimg from './skills/arrow.png'
+import { useDispatch, useSelector } from 'react-redux';
+import { cgskill1, cgskill2, cgskill3, cgskill4 } from '../../store';
 
 
 
@@ -130,25 +135,21 @@ function Profile() {
         window.addEventListener('resize', () => {
             scrollpage.init()
         })
-        // console.log(realsticky.children.children[0])
     }, [])
 
     const addToRefs = (el) => {
         if (el && !sectionRef.current.includes(el)) {
             sectionRef.current.push(el);
-            console.log(section)
         }
     }
     const addToheader = (el) => {
         if (el && !header.includes(el)) {
             header.push(el)
-            console.log(header)
         }
     }
     const addTocontent = (el) => {
         if (el && !content.includes(el)) {
             content.push(el)
-            console.log(content)
         }
     }
 
@@ -167,7 +168,6 @@ function Profile() {
                 const centerX = left - offsetWidth / 2
                 const centerY = top - offsetHeight / 2
                 const d = Math.sqrt(centerX ** 2 + centerY ** 2)
-                console.log(centerX, centerY, d);
 
                 // element.style.transform = `
                 //     translate3d(${centerX / 1.5}px, ${centerY / 1.5}px, 0)
@@ -203,7 +203,6 @@ function Profile() {
                 const centerX = left - offsetWidth / 2
                 const centerY = top - offsetHeight / 2
                 const d = Math.sqrt(centerX ** 2 + centerY ** 2)
-                console.log(centerX, centerY, d);
 
                 // element.style.transform = `
                 //     translate3d(${centerX / 1.5}px, ${centerY / 1.5}px, 0)
@@ -254,7 +253,6 @@ function Profile() {
 
         }
 
-        console.log(window.scrollY)
 
 
         arc1()
@@ -355,137 +353,335 @@ function Profile() {
 
     }, [])
 
-    const canvasRef1 = useRef()
-    // let [skill,setSkill] = useState()
 
+    let [language, setLanguage] = useState([{ name: 'HTML5', img: html5img }, { name: 'CSS3', img: css3img }, { name: 'Javascript', img: jsimg }])
+    let [DB, setDB] = useState([{ name: 'mongoDB', img: mongodbimg }])
+    let [library, setLibrary] = useState([{ name: 'jQuery', img: jQueryimg }, { name: 'React', img: reactimg }, { name: 'Redux', img: reduximg }, { name: 'Gsap', img: gsapimg }, { name: 'framer-motion', img: framerimg }])
+    let [etc, setEtc] = useState([{ name: 'Git', img: Gitimg }, { name: 'Canvas', img: canvasimg }])
+
+    let skillcont = useSelector((state) => { return state.skillcont });
+
+    let dispatch = useDispatch()
+
+    const skill1ref = useRef([])
+    skill1ref.current = []
+    const skill1 = skill1ref.current
+
+    const addToskill1 = (e) => {
+        if (e && !skill1.includes(e)) {
+            skill1.push(e)
+        };
+    }
+
+    const skill2ref = useRef([])
+    skill2ref.current = []
+    const skill2 = skill2ref.current
+
+    const addToskill2 = (e) => {
+        if (e && !skill2.includes(e)) {
+            skill2.push(e)
+        };
+    }
+
+    const skill3ref = useRef([])
+    skill3ref.current = []
+    const skill3 = skill3ref.current
+
+    const addToskill3 = (e) => {
+        if (e && !skill3.includes(e)) {
+            skill3.push(e)
+        };
+    }
+
+    const skill4ref = useRef([])
+    skill4ref.current = []
+    const skill4 = skill4ref.current
+
+    const addToskill4 = (e) => {
+        if (e && !skill4.includes(e)) {
+            skill4.push(e)
+        };
+    }
+
+    function dropdown() {
+        if (skillcont[0] == 1) {
+            skill1.forEach((v, i) => {
+                let abc = skill1.length - 1
+                skill1[abc - i].animate([
+                    { opacity: 1, transform: "translateX(0)" },
+                    { opacity: 0, transform: "translateX(-100px)" }
+                ], {
+                    delay: 100 * i,
+                    duration: 500,
+                    fill: "forwards"
+                })
+
+            });
+        } else if (skillcont[0] == 0) {
+            skill1.forEach((v, i) => {
+                v.animate([
+                    { opacity: 0, transform: "translateX(-100px)" },
+                    { opacity: 1, transform: "translateX(0)" }
+                ], {
+                    delay: 100 * i,
+                    duration: 500,
+                    fill: "forwards"
+                })
+
+            });
+        }
+    }
+    function dropdown2() {
+        if (skillcont[1] == 1) {
+            skill2.forEach((v, i) => {
+                let abc = skill2.length - 1
+                skill2[abc - i].animate([
+                    { opacity: 1, transform: "translateX(0)" },
+                    { opacity: 0, transform: "translateX(-100px)" }
+                ], {
+                    delay: 100 * i,
+                    duration: 500,
+                    fill: "forwards"
+                })
+
+            });
+        } else if (skillcont[1] == 0) {
+            skill2.forEach((v, i) => {
+                v.animate([
+                    { opacity: 0, transform: "translateX(-100px)" },
+                    { opacity: 1, transform: "translateX(10px)" }
+                ], {
+                    delay: 100 * i,
+                    duration: 500,
+                    fill: "forwards"
+                })
+
+            });
+        }
+    }
+    function dropdown3() {
+        if (skillcont[2] == 1) {
+            skill3.forEach((v, i) => {
+                let abc = skill3.length - 1
+                skill3[abc - i].animate([
+                    { opacity: 1, transform: "translateX(0)" },
+                    { opacity: 0, transform: "translateX(-100px)" }
+                ], {
+                    delay: 100 * i,
+                    duration: 500,
+                    fill: "forwards"
+                })
+
+            });
+        } else if (skillcont[2] == 0) {
+            skill3.forEach((v, i) => {
+                v.animate([
+                    { opacity: 0, transform: "translateX(-100px)" },
+                    { opacity: 1, transform: "translateX(0)" }
+                ], {
+                    delay: 100 * i,
+                    duration: 500,
+                    fill: "forwards"
+                })
+
+            });
+        }
+    }
+    function dropdown4() {
+        if (skillcont[3] == 1) {
+            skill4.forEach((v, i) => {
+                let abc = skill4.length - 1
+                skill4[abc - i].animate([
+                    { opacity: 1, transform: "translateX(0)" },
+                    { opacity: 0, transform: "translateX(-100px)" }
+                ], {
+                    delay: 100 * i,
+                    duration: 500,
+                    fill: "forwards"
+                })
+
+            });
+        } else if (skillcont[3] == 0) {
+            skill4.forEach((v, i) => {
+                v.animate([
+                    { opacity: 0, transform: "translateX(-100px)" },
+                    { opacity: 1, transform: "translateX(0)" }
+                ], {
+                    delay: 100 * i,
+                    duration: 500,
+                    fill: "forwards"
+                })
+
+            });
+        }
+    }
 
     useEffect(() => {
-        console.log(content[2])
-        const canvas = canvasRef1.current;
-        canvas.width = content[2].clientWidth
-        canvas.height = content[2].clientHeight
-        const context = canvas.getContext('2d');
+        // dropdown()
+        // function dropdown2() {
+        //     if (skillcont[1] == 0) {
+        //         skill2.forEach((v, i) => {
+        //             let abc = skill2.length - 1
+        //             skill2[abc - i].animate([
+        //                 { opacity: 1, transform: "translateX(0)" },
+        //                 { opacity: 0, transform: "translateX(-100px)" }
+        //             ], {
+        //                 delay: 100 * i,
+        //                 duration: 500,
+        //                 fill: "forwards"
+        //             })
 
-        const skillArray = []
-        const skills = []
+        //         });
+        //     } else {
+        //         skill2.forEach((v, i) => {
+        //             v.animate([
+        //                 { opacity: 0, transform: "translateX(-100px)" },
+        //                 { opacity: 1, transform: "translateX(0)" }
+        //             ], {
+        //                 delay: 100 * i,
+        //                 duration: 500,
+        //                 fill: "forwards"
+        //             })
 
-        // console.log(content[2].style.height)
-        const canvasImg = new Image()
-        const css3Img = new Image()
-        const gitbashImg = new Image()
-        const gsapImg = new Image()
-        const html5Img = new Image()
-        const jQueryImg = new Image()
-        const jsImg = new Image()
-        const mongodbImg = new Image()
-        const reactImg = new Image()
-        const reduxImg = new Image()
-        const vueImg = new Image()
-        const instaImg = new Image()
-        const blogImg = new Image()
-        const githubImg = new Image()
-
-        canvasImg.src = canvasimg
-        css3Img.src = css3img
-        gitbashImg.src = gitbashimg
-        gsapImg.src = gsapimg
-        html5Img.src = html5img
-        jQueryImg.src = jQueryimg
-        jsImg.src = jsimg
-        mongodbImg.src = mongodbimg
-        reactImg.src = reactimg
-        reduxImg.src = reduximg
-        vueImg.src = vueimg
-        instaImg.src = instaimg
-        blogImg.src = blogimg
-        githubImg.src = gitimg
-
-        skillArray.push(canvasImg, css3Img, gitbashImg, gsapImg, html5Img, jQueryImg, jsImg, mongodbImg, reactImg, reduxImg, vueImg);
+        //         });
+        //     }
 
 
-        canvasImg.onload = () => {
-            for (let i = 0; i < skillArray.length; i++) {
-                skills.push(new Skills())
-                // skills[i].draw(skillArray[i])
-            }
+        // }
+        // dropdown2()
+    })
 
-            render()
-        }
+    // const canvasRef1 = useRef()
+    // // let [skill,setSkill] = useState()
 
 
-        function render() {
-            context.clearRect(0, 0, canvas.width, canvas.height);
-            skills.forEach((v, i) => {
-                v.animate(skillArray[i], i)
-            })
-            window.requestAnimationFrame(render)
+    // useEffect(() => {
+    //     console.log(content[2])
+    //     const canvas = canvasRef1.current;
+    //     canvas.width = content[2].clientWidth
+    //     canvas.height = content[2].clientHeight
+    //     const context = canvas.getContext('2d');
 
-        }
+    //     const skillArray = []
+    //     const skills = []
 
-        // render()
-        window.addEventListener('resize', () => {
-            canvas.width = content[2].clientWidth
-            canvas.height = content[2].clientHeight
-            // canvas.style.top = 12 + '%'
-            // canvas.style.margin = 'auto'
-        })
+    //     // console.log(content[2].style.height)
+    //     const canvasImg = new Image()
+    //     const css3Img = new Image()
+    //     const gitbashImg = new Image()
+    //     const gsapImg = new Image()
+    //     const html5Img = new Image()
+    //     const jQueryImg = new Image()
+    //     const jsImg = new Image()
+    //     const mongodbImg = new Image()
+    //     const reactImg = new Image()
+    //     const reduxImg = new Image()
+    //     const vueImg = new Image()
+    //     const instaImg = new Image()
+    //     const blogImg = new Image()
+    //     const githubImg = new Image()
+
+    //     canvasImg.src = canvasimg
+    //     css3Img.src = css3img
+    //     gitbashImg.src = gitbashimg
+    //     gsapImg.src = gsapimg
+    //     html5Img.src = html5img
+    //     jQueryImg.src = jQueryimg
+    //     jsImg.src = jsimg
+    //     mongodbImg.src = mongodbimg
+    //     reactImg.src = reactimg
+    //     reduxImg.src = reduximg
+    //     vueImg.src = vueimg
+    //     instaImg.src = instaimg
+    //     blogImg.src = blogimg
+    //     githubImg.src = gitimg
+
+    //     skillArray.push(canvasImg, css3Img, gitbashImg, gsapImg, html5Img, jQueryImg, jsImg, mongodbImg, reactImg, reduxImg, vueImg);
+
+
+    //     canvasImg.onload = () => {
+    //         for (let i = 0; i < skillArray.length; i++) {
+    //             skills.push(new Skills())
+    //             // skills[i].draw(skillArray[i])
+    //         }
+
+    //         render()
+    //     }
+
+
+    //     function render() {
+    //         context.clearRect(0, 0, canvas.width, canvas.height);
+    //         skills.forEach((v, i) => {
+    //             v.animate(skillArray[i], i)
+    //         })
+    //         window.requestAnimationFrame(render)
+
+    //     }
+
+    //     // render()
+    //     window.addEventListener('resize', () => {
+    //         canvas.width = content[2].clientWidth
+    //         canvas.height = content[2].clientHeight
+    //         // canvas.style.top = 12 + '%'
+    //         // canvas.style.margin = 'auto'
+    //     })
 
 
 
 
 
 
-        class Skills {
-            constructor(v, i) {
-                this.x = Math.random() * canvas.width
-                this.y = Math.random() * canvas.height / 1.5
-                this.w = 80
-                this.h = 80
-                this.xSpeed = 0.5
-                this.rdSpeed = 10
-                this.sinnum = 90
-                this.radian = i * 0.3
-            }
+    //     class Skills {
+    //         constructor(v, i) {
+    //             this.x = Math.random() * canvas.width
+    //             this.y = Math.random() * canvas.height / 1.5
+    //             this.w = 80
+    //             this.h = 80
+    //             this.xSpeed = 0.5
+    //             this.rdSpeed = 10
+    //             this.sinnum = 90
+    //             this.radian = i * 0.3
+    //         }
 
-            draw(v, i) {
-                // this.radian += this.rdSpeed
-                this.radian += this.rdSpeed
-                if (this.x > canvas.width) {
-                    this.x = Math.random() * -canvas.width
-                    this.y = Math.random() * canvas.height / 1.5
-                    this.w = 80
-                    this.h = 80
-                    // this.xSpeed = 0.5
-                }
-                if (window.innerWidth < 750) {
-                    context.drawImage(
-                        v,
-                        this.x,
-                        this.y,
-                        this.w / 1.5,
-                        this.h / 1.5
-                    );
-                } else {
+    //         draw(v, i) {
+    //             // this.radian += this.rdSpeed
+    //             this.radian += this.rdSpeed
+    //             if (this.x > canvas.width) {
+    //                 this.x = Math.random() * -canvas.width
+    //                 this.y = Math.random() * canvas.height / 1.5
+    //                 this.w = 80
+    //                 this.h = 80
+    //                 // this.xSpeed = 0.5
+    //             }
+    //             if (window.innerWidth < 750) {
+    //                 context.drawImage(
+    //                     v,
+    //                     this.x,
+    //                     this.y,
+    //                     this.w / 1.5,
+    //                     this.h / 1.5
+    //                 );
+    //             } else {
 
-                    context.drawImage(
-                        v,
-                        this.x,
-                        this.y,
-                        this.w,
-                        this.h
-                    );
-                }
+    //                 context.drawImage(
+    //                     v,
+    //                     this.x,
+    //                     this.y,
+    //                     this.w,
+    //                     this.h
+    //                 );
+    //             }
 
-            }
+    //         }
 
-            animate(v) {
-                this.x += this.xSpeed
-                this.sinnum += this.rdSpeed
-                this.y += Math.sin(this.sinnum * Math.PI / 180 * 0.2)
-                this.draw(v)
-            }
-        }
-    }, [])
+    //         animate(v) {
+    //             this.x += this.xSpeed
+    //             this.sinnum += this.rdSpeed
+    //             this.y += Math.sin(this.sinnum * Math.PI / 180 * 0.2)
+    //             this.draw(v)
+    //         }
+    //     }
+    // }, [])
 
     const cirtextRef = useRef([])
     cirtextRef.current = []
@@ -512,8 +708,8 @@ function Profile() {
     useEffect(() => {
         const canvas = canvasRef3.current;
         const context = canvas.getContext("2d");
-        canvas.width = canvasRef1.current.width;
-        canvas.height = canvasRef1.current.height;
+        canvas.width = content[2].clientWidth;
+        canvas.height = content[2].clientHeight;
 
         const anmanArray = []
         const anCount = 1
@@ -536,8 +732,8 @@ function Profile() {
         }
 
         window.addEventListener('resize', () => {
-            canvas.width = canvasRef1.current.width;
-            canvas.height = canvasRef1.current.height;
+            canvas.width = content[2].clientWidth;
+            canvas.height = content[2].clientHeight;
 
         })
 
@@ -596,7 +792,7 @@ function Profile() {
 
             }
         }
-    })
+    }, [])
 
     // const content1hRef = useRef(null);
     // useEffect(() => {
@@ -725,8 +921,114 @@ function Profile() {
                             <h2>File Three : Skills</h2>
                         </div>
                         <div ref={addTocontent} className={`${styles.content} ${styles.content3}`}>
-                            <canvas ref={canvasRef1} style={canvasStyle1}></canvas>
+                            {/* <canvas ref={canvasRef1} style={canvasStyle1}></canvas> */}
                             <canvas ref={canvasRef3}></canvas>
+                            <div className={styles.SkillBox}>
+                                <div className={styles.skill1}>
+                                    <div style={{ display: 'flex' }}>
+                                        <p className={styles.skill1box} onClick={() => {
+                                            if (skillcont[0] == 0) {
+                                                dispatch(cgskill1(1))
+                                            } else if (skillcont[0] == 1) {
+                                                dispatch(cgskill1(0))
+                                            }
+                                            dropdown()
+                                        }}>Language</p>
+                                        {skillcont[0] == 0 ?
+                                            <img style={{ transform: 'rotate(0deg)' }} width={35} src={arrowimg} /> :
+                                            <img style={{ transform: 'rotate(540deg)' }} width={35} src={arrowimg} />
+                                        }
+                                    </div>
+                                    <div className={styles.skill2}>
+                                        {language.map((v, i) => {
+                                            return <>
+                                                <div ref={addToskill1} className={styles.skillcontent}>
+                                                    <img width={40} height={40} src={v.img}></img> <p>{v.name}</p>
+                                                </div>
+                                            </>
+
+                                        })}
+                                    </div>
+                                </div>
+                                <div className={styles.skill1}>
+                                    <div style={{ display: 'flex' }}>
+                                        <p className={styles.skill1box} onClick={() => {
+                                            if (skillcont[1] == 0) {
+                                                dispatch(cgskill2(1))
+                                            } else if (skillcont[1] == 1) {
+                                                dispatch(cgskill2(0))
+                                            }
+                                            dropdown2()
+                                        }}>Library</p>
+                                        {skillcont[1] == 0 ?
+                                            <img style={{ transform: 'rotate(0deg)' }} width={35} src={arrowimg} /> :
+                                            <img style={{ transform: 'rotate(540deg)' }} width={35} src={arrowimg} />
+                                        }
+                                    </div>
+                                    <div className={styles.skill2}>
+                                        {library.map((v, i) => {
+                                            return <>
+                                                <div ref={addToskill2} className={styles.skillcontent}>
+                                                    <img width={40} height={40} src={v.img}></img> <p>{v.name}</p>
+                                                </div>
+                                            </>
+
+                                        })}
+                                    </div>
+                                </div>
+                                <div className={styles.skill1}>
+                                    <div style={{ display: 'flex' }}>
+                                        <p className={styles.skill1box} onClick={() => {
+                                            if (skillcont[2] == 0) {
+                                                dispatch(cgskill3(1))
+                                            } else if (skillcont[2] == 1) {
+                                                dispatch(cgskill3(0))
+                                            }
+                                            dropdown3()
+                                        }}>Database</p>
+                                        {skillcont[2] == 0 ?
+                                            <img style={{ transform: 'rotate(0deg)' }} width={35} src={arrowimg} /> :
+                                            <img style={{ transform: 'rotate(540deg)' }} width={35} src={arrowimg} />
+                                        }
+                                    </div>
+                                    <div className={styles.skill2}>
+                                        {DB.map((v, i) => {
+                                            return <>
+                                                <div ref={addToskill3} className={styles.skillcontent}>
+                                                    <img width={40} height={40} src={v.img}></img> <p>{v.name}</p>
+                                                </div>
+                                            </>
+
+                                        })}
+                                    </div>
+                                </div>
+                                <div className={styles.skill1}>
+                                    <div style={{ display: 'flex' }}>
+                                        <p className={styles.skill1box} onClick={() => {
+                                            if (skillcont[3] == 0) {
+                                                dispatch(cgskill4(1))
+                                            } else if (skillcont[3] == 1) {
+                                                dispatch(cgskill4(0))
+                                            }
+                                            dropdown4()
+                                        }}>ETC.</p>
+                                        {skillcont[3] == 0 ?
+                                            <img style={{ transform: 'rotate(90deg)' }} width={35} src={arrowimg} /> :
+                                            <img style={{ transform: 'rotate(630deg)' }} width={35} src={arrowimg} />
+                                        }
+                                    </div>
+                                    <div className={styles.skill2}>
+                                        {etc.map((v, i) => {
+                                            return <>
+                                                <div ref={addToskill4} className={styles.skillcontent}>
+                                                    <img width={40} height={40} src={v.img}></img> <p>{v.name}</p>
+                                                </div>
+                                            </>
+
+                                        })}
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

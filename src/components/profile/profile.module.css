@@ -227,6 +227,35 @@
   font-size: 10px;
 }
 
+.SkillBox {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  font-family: "SF_HambakSnow";
+}
+.SkillBox .skill1box {
+  cursor: pointer;
+  font-size: 18px;
+}
+.SkillBox .skill1 {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.SkillBox .skill1 img {
+  transition: all 1s;
+}
+.SkillBox .skillcontent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  opacity: 0;
+}
+.SkillBox .skill2 p {
+  padding-left: 10px;
+}
+
 @font-face {
   font-family: "KyoboHandwriting2020A";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/KyoboHandwriting2020A.woff") format("woff");
@@ -237,6 +266,12 @@
   font-family: "Pretendard-Regular";
   src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
   font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SF_HambakSnow";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/SF_HambakSnow.woff") format("woff");
+  font-weight: normal;
   font-style: normal;
 }
 @media (max-width: 750px) {
