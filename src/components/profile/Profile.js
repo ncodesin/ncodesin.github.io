@@ -19,6 +19,7 @@ import framerimg from './skills/framer.png'
 import instaimg from './reference/insta.png'
 import gitimg from './reference/github.png'
 import blogimg from './reference/blog.png'
+import scssimg from './skills/Scss.png'
 import { render } from '@testing-library/react';
 import { motion } from "framer-motion"
 import anman from './ansheet.png'
@@ -354,7 +355,7 @@ function Profile() {
     }, [])
 
 
-    let [language, setLanguage] = useState([{ name: 'HTML5', img: html5img }, { name: 'CSS3', img: css3img }, { name: 'Javascript', img: jsimg }])
+    let [language, setLanguage] = useState([{ name: 'HTML5', img: html5img }, { name: 'CSS3', img: css3img }, { name: 'Javascript', img: jsimg }, { name: 'Scss', img: scssimg }])
     let [DB, setDB] = useState([{ name: 'mongoDB', img: mongodbimg }])
     let [library, setLibrary] = useState([{ name: 'jQuery', img: jQueryimg }, { name: 'React', img: reactimg }, { name: 'Redux', img: reduximg }, { name: 'Gsap', img: gsapimg }, { name: 'framer-motion', img: framerimg }])
     let [etc, setEtc] = useState([{ name: 'Git', img: Gitimg }, { name: 'Canvas', img: canvasimg }])

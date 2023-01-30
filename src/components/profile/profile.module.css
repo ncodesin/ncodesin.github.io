@@ -231,7 +231,6 @@
   width: 100%;
   position: absolute;
   display: flex;
-  flex-wrap: wrap;
   font-family: "SF_HambakSnow";
 }
 .SkillBox .skill1box {

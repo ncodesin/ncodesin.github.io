@@ -30,8 +30,8 @@ const variants = {
 // let job = useSelector((state)=>{return state.expjob})
 
 
-const colors = ["cornflowerblue", "blue", "violet", "brown"]
-const fontcolors = ["brown", "cornflowerblue", "blue", "violet"]
+const colors = ["black", "gray", "black", "gray"]
+const fontcolors = ["gray", "black", "gray", "black"]
 const textdata = ["Exp-Job", "Exp-Travel", "Exp-School", "Return to list"]
 // const navidata = [`${}`]
 

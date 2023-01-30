@@ -123,11 +123,11 @@
 }
 
 .textaniMain path {
-  stroke: pink;
+  stroke: black;
 }
 
 .textaniBg path {
-  stroke: cornflowerblue;
+  stroke: darkgray;
 }
 
 @-webkit-keyframes test {
