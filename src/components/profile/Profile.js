@@ -412,7 +412,7 @@ function Profile() {
                     { opacity: 0, transform: "translateX(-100px)" }
                 ], {
                     delay: 100 * i,
-                    duration: 500,
+                    duration: 300,
                     fill: "forwards"
                 })
 
@@ -424,7 +424,7 @@ function Profile() {
                     { opacity: 1, transform: "translateX(0)" }
                 ], {
                     delay: 100 * i,
-                    duration: 500,
+                    duration: 300,
                     fill: "forwards"
                 })
 
@@ -440,7 +440,7 @@ function Profile() {
                     { opacity: 0, transform: "translateX(-100px)" }
                 ], {
                     delay: 100 * i,
-                    duration: 500,
+                    duration: 300,
                     fill: "forwards"
                 })
 
@@ -452,7 +452,7 @@ function Profile() {
                     { opacity: 1, transform: "translateX(10px)" }
                 ], {
                     delay: 100 * i,
-                    duration: 500,
+                    duration: 300,
                     fill: "forwards"
                 })
 
@@ -468,7 +468,7 @@ function Profile() {
                     { opacity: 0, transform: "translateX(-100px)" }
                 ], {
                     delay: 100 * i,
-                    duration: 500,
+                    duration: 300,
                     fill: "forwards"
                 })
 
@@ -480,7 +480,7 @@ function Profile() {
                     { opacity: 1, transform: "translateX(0)" }
                 ], {
                     delay: 100 * i,
-                    duration: 500,
+                    duration: 300,
                     fill: "forwards"
                 })
 
@@ -496,7 +496,7 @@ function Profile() {
                     { opacity: 0, transform: "translateX(-100px)" }
                 ], {
                     delay: 100 * i,
-                    duration: 500,
+                    duration: 300,
                     fill: "forwards"
                 })
 
@@ -508,7 +508,7 @@ function Profile() {
                     { opacity: 1, transform: "translateX(0)" }
                 ], {
                     delay: 100 * i,
-                    duration: 500,
+                    duration: 300,
                     fill: "forwards"
                 })
 
@@ -935,7 +935,7 @@ function Profile() {
                                             dropdown()
                                         }}>Language</p>
                                         {skillcont[0] == 0 ?
-                                            <img style={{ transform: 'rotate(0deg)' }} width={35} src={arrowimg} /> :
+                                            <img style={{ transform: 'rotate(90deg)' }} width={35} src={arrowimg} /> :
                                             <img style={{ transform: 'rotate(540deg)' }} width={35} src={arrowimg} />
                                         }
                                     </div>
@@ -961,7 +961,7 @@ function Profile() {
                                             dropdown2()
                                         }}>Library</p>
                                         {skillcont[1] == 0 ?
-                                            <img style={{ transform: 'rotate(0deg)' }} width={35} src={arrowimg} /> :
+                                            <img style={{ transform: 'rotate(90deg)' }} width={35} src={arrowimg} /> :
                                             <img style={{ transform: 'rotate(540deg)' }} width={35} src={arrowimg} />
                                         }
                                     </div>
@@ -987,7 +987,7 @@ function Profile() {
                                             dropdown3()
                                         }}>Database</p>
                                         {skillcont[2] == 0 ?
-                                            <img style={{ transform: 'rotate(0deg)' }} width={35} src={arrowimg} /> :
+                                            <img style={{ transform: 'rotate(90deg)' }} width={35} src={arrowimg} /> :
                                             <img style={{ transform: 'rotate(540deg)' }} width={35} src={arrowimg} />
                                         }
                                     </div>
@@ -1014,7 +1014,7 @@ function Profile() {
                                         }}>ETC.</p>
                                         {skillcont[3] == 0 ?
                                             <img style={{ transform: 'rotate(90deg)' }} width={35} src={arrowimg} /> :
-                                            <img style={{ transform: 'rotate(630deg)' }} width={35} src={arrowimg} />
+                                            <img style={{ transform: 'rotate(540deg)' }} width={35} src={arrowimg} />
                                         }
                                     </div>
                                     <div className={styles.skill2}>

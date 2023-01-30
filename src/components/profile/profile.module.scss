@@ -298,6 +298,7 @@
   width: 100%;
   position: absolute;
   display: flex;
+  flex-wrap: wrap;
   font-family: "SF_HambakSnow";
   .skill1box {
     cursor: pointer;
@@ -358,5 +359,16 @@
   }
   .content2 {
     font-size: 13px;
+  }
+  .SkillBox {
+    .skillcontent {
+      font-size: 13px;
+    }
+    .skill1box {
+      font-size: 13px;
+    }
+    .skill1 {
+      width: 25%;
+    }
   }
 }
