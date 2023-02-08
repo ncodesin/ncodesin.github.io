@@ -320,7 +320,7 @@ const Main = () => {
                         </div>
                     </div>
                     <div ref={buttonRef} className={styles.enter}>
-                        <span onClick={() => { navigate('/list') }}>Click To Enter</span>
+                        <span onTouchEnd={() => { navigate('/list') }}>Click To Enter</span>
                     </div>
                     <canvas ref={canvasRef2} style={canvasStyle2}></canvas>
                 </div>
