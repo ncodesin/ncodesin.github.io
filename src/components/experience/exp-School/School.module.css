@@ -50,7 +50,6 @@
   transition: all 0.5s;
 }
 .windowbox .sticky1 .styimg {
-  position: -webkit-sticky;
   position: sticky;
   top: 200px;
   float: right;
@@ -58,7 +57,6 @@
 }
 .windowbox .sticky1 .textcontent {
   width: 30%;
-  position: -webkit-sticky;
   position: sticky;
   top: 250px;
   font-size: 20px;
@@ -123,10 +121,8 @@
   stroke: black;
   stroke-dasharray: var(--length);
   stroke-dashoffset: var(--length);
-  -webkit-animation: test var(--duration) forwards;
-          animation: test var(--duration) forwards;
-  -webkit-animation-delay: var(--delay);
-          animation-delay: var(--delay);
+  animation: test var(--duration) forwards;
+  animation-delay: var(--delay);
 }
 
 .textaniMain path {
@@ -135,12 +131,6 @@
 
 .textaniBg path {
   stroke: white;
-}
-
-@-webkit-keyframes test {
-  100% {
-    stroke-dashoffset: 0;
-  }
 }
 
 @keyframes test {

@@ -17,7 +17,6 @@
 }
 .page .sticky {
   box-sizing: border-box;
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   width: 100%;
@@ -171,7 +170,6 @@
   transition: transform ease-out;
 }
 .page .canvasSticky {
-  position: -webkit-sticky;
   position: sticky;
   overflow: hidden;
   width: 100%;
@@ -190,16 +188,7 @@
   font-size: 20px;
   margin: 0;
   transform-origin: 49.4% 50%;
-  -webkit-animation: text-rotate 10s linear infinite;
-          animation: text-rotate 10s linear infinite;
-}
-@-webkit-keyframes text-rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  animation: text-rotate 10s linear infinite;
 }
 @keyframes text-rotate {
   from {

@@ -23,24 +23,14 @@
 
 .textaniMain path {
   stroke: yellow;
-  -webkit-animation: test var(--duration1) ease-in forwards;
-          animation: test var(--duration1) ease-in forwards;
-  -webkit-animation-delay: var(--delay1);
-          animation-delay: var(--delay1);
+  animation: test var(--duration1) ease-in forwards;
+  animation-delay: var(--delay1);
 }
 
 .textaniBg path {
   stroke: black;
-  -webkit-animation: test var(--duration) ease forwards;
-          animation: test var(--duration) ease forwards;
-  -webkit-animation-delay: var(--delay);
-          animation-delay: var(--delay);
-}
-
-@-webkit-keyframes test {
-  100% {
-    stroke-dashoffset: 0;
-  }
+  animation: test var(--duration) ease forwards;
+  animation-delay: var(--delay);
 }
 
 @keyframes test {
@@ -67,16 +57,8 @@
   stroke-dasharray: var(--length);
   stroke-dashoffset: var(--length);
   stroke: black;
-  -webkit-animation: test1 var(--duration) ease-in forwards;
-          animation: test1 var(--duration) ease-in forwards;
-  -webkit-animation-delay: var(--delay);
-          animation-delay: var(--delay);
-}
-
-@-webkit-keyframes test1 {
-  100% {
-    stroke-dashoffset: 0;
-  }
+  animation: test1 var(--duration) ease-in forwards;
+  animation-delay: var(--delay);
 }
 
 @keyframes test1 {
